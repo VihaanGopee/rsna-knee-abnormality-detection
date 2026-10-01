@@ -7,6 +7,35 @@
 
 ---
 
+## 0. Stress-Test Revisions (2026-09-30)
+
+Justin challenged this plan before execution. Three flaws were found and fixed:
+
+1. **Compute fiction.** Custom SSL pretraining (Phase 3) does not fit Kaggle's 30h/week quota.
+   It is now **Tier 3 — conditional** on ablation evidence + sufficient Colab units, not a committed phase.
+2. **Phase 1 oversell.** Fine-tuning the LLM labeler on 58 gold examples is experimental
+   (tiny sample, partly circular). The committed win is simpler: our own **clean, uncontaminated
+   labels** via the best measured method (Qwen3-14B closed-vocab, 0.881) + abstain-masking.
+   Labeler fine-tuning is a stretch experiment, not a certain moat.
+3. **Unmeasured throughput.** Phase sizes were guessed without training-speed numbers.
+   **Every phase now starts with a timing probe** (1 epoch on a subset → real iters/sec → sized plan).
+   See `EXECUTION_PROTOCOL.md` — no GPU run starts without passing pre-flight.
+
+**Compute budget (confirmed 2026-09-30):** ~90 GPU-hours Kaggle (2×T4, 30h/week × ~3 weeks)
++ **200 Google Colab units**. Exchange rates: T4 ~2 units/hr (≈100h), A100 ~14/hr (≈14h).
+Budget: label extraction ~20u, probes/ablations ~20u, main training on Kaggle quota + Colab
+overflow, **A100 reserve ~10–14h held for the single highest-leverage run**. Full SSL pretraining
+(700+ units) stays shelved unless ablations prove features are the bottleneck.
+
+**Score calibration (honest ranges, not false precision):**
+- Base case 0.94–0.945 (top ~50–100, robust to shakeup)
+- Good execution 0.945–0.95 (prize fringe)
+- Everything lands 0.95+ (top-10 contention, $5K+)
+- Depends most on: (1) label quality, (2) ensemble diversity, (3) surviving the shakeup.
+  A robust 0.945 can outrank a fragile 0.955 when the private board lands.
+
+---
+
 ## 1. The Problem, Precisely
 
 Per knee MRI **study**, predict 12 abnormality confidences:
@@ -45,7 +74,17 @@ Justin studied Soheil Ayati's 2nd-place Biohub writeup and asked for that same i
 
 ---
 
-## 3. Phase 0 — Data Pipeline & Cache (the foundation everything stands on)
+## Tiering (what's committed vs stretch)
+
+- **Tier 1 — committed:** Phase 0 → Phase 1 (clean labels) → Phase 2 (one strong family)
+  → Phase 4 (ensemble + survival). **Bank a robust submission by end of week 2.**
+- **Tier 2 — if compute allows:** teacher-student refinement, second model family, LibAUC head fine-tune.
+- **Tier 3 — conditional:** custom SSL pretraining on the corpus. Only if ablations prove
+  features are the bottleneck AND the unit budget supports it. Currently shelved.
+
+---
+
+## 3. Phase 0 — Data Pipeline & Cache (Tier 1)
 
 **Measured facts about the data:**
 - ~819k DICOM files (~710 GB extrapolated), 4,407 studies / 24,371 series
@@ -78,7 +117,7 @@ Justin studied Soheil Ayati's 2nd-place Biohub writeup and asked for that same i
 
 ---
 
-## 4. Phase 1 — Label Extraction (the highest-leverage phase)
+## 4. Phase 1 — Label Extraction (Tier 1, the highest-leverage phase)
 
 **Measured labeler quality vs the 58 gold:**
 
@@ -105,7 +144,7 @@ Per-target extremes: ACL ~0.97–0.99 (easiest), **Synovitis ~0.68** (hardest).
 
 ---
 
-## 5. Phase 2 — Baseline Models (prove the pipeline before the moats)
+## 5. Phase 2 — Baseline Models (Tier 1 — one strong family, trained for real)
 
 **Architecture consensus (what works):**
 - **2.5D self-supervised ViTs**, not 3D CNNs. Workhorse: **DINOv2 ViT-S/14** (22M, fully fine-tuned) + attention pooling over slices
@@ -127,5 +166,75 @@ Per-target extremes: ACL ~0.97–0.99 (easiest), **Synovitis ~0.68** (hardest).
 - Decide everything on scanner-grouped OOF. Fixed fusion weights — **no LB-probed blend weights** (that's the shakeup trap: fork fingerprints at 0.936/0.937 + documented LB-probed weights = classic shakeup setup).
 
 **Deliverables:**
-- `notebooks/phase2a-din
-...[truncated 8236 chars]
+- `notebooks/phase2-timing-probe.ipynb` — 1 epoch on a 10% subset → measured iters/sec,
+  memory footprint, loss curve sanity. **Sizes everything downstream. Nothing long runs before this.**
+- `notebooks/phase2a-dinov2.ipynb` — DINOv2 ViT-S/14, 336px, ASL, two-stage, scanner-grouped folds.
+- **Go/no-go gate:** single family must clear **0.93 on scanner-grouped OOF**. Below that,
+  stop — the problem is labels or pipeline, not model capacity. Do not ensemble a broken base.
+
+---
+
+## 6. Phase 3 — Custom Moats (Tier 2 committed experiments, Tier 3 conditional)
+
+**Tier 2 (committed if Tier 1 gates pass):**
+1. **Teacher-student label refinement** — train a teacher on our labels, mix teacher predictions
+   50/50 with LLM labels (quantile-matched), retrain. **+0.009 LB measured** (TianK003).
+2. **Noisy Student iteration** — soft pseudo-labels, RandAugment + dropout/stochastic depth noise,
+   equal-or-larger student, iterate.
+3. **LibAUC head fine-tuning** — AUCMLoss + PESG as a head-only pass on 2×T4.
+   Unexplored in public logs; cheap to try, kill fast if flat.
+
+**Tier 3 (conditional — shelved unless ablations prove features are the bottleneck):**
+- **Self-supervised pretraining on the competition corpus** (MAE on ~819k slices).
+  The architectural moat nobody public has. Requires 700+ Colab units — does not fit the
+  200-unit budget. Revisit only with fresh evidence + fresh budget.
+
+---
+
+## 7. Phase 4 — Ensemble + Submission Engineering (Tier 1)
+
+- **Rank-mean blending** of *disagreeing* families (blend gain comes from disagreement,
+  ρ=0.542 across families vs 0.905–0.986 within family). Fixed weights — no LB probing.
+- **"Adding members is the only operation that has ever moved this board"** —
+  member count +0.002 measured twice, blend-weight tuning +0.000. Spend effort on members, not weights.
+- **Survival engineering:** decode DICOMs once, share across members; incremental
+  `submission.csv` every 25 studies; runtime projection; staged degradation
+  (drop weakest members first if behind schedule); failed study → 0.5, never crash.
+- **Never P100.** `machine_shape: NvidiaTeslaT4` (wrong names silently fall back to P100).
+
+**Deliverable:** `notebooks/rsna-knee-final-v1.ipynb` — the canonical submission notebook.
+
+---
+
+## 8. Timeline (22 days)
+
+| Week | Focus | Milestone |
+|---|---|---|
+| Week 1 (Sep 30–Oct 6) | Phase 0 + Phase 1 | Cache built; clean label table generated; extractor validated vs gold-58 |
+| Week 2 (Oct 7–13) | Phase 2 | Timing probe → DINOv2 trained → **0.93 OOF gate** → robust submission banked |
+| Week 3 (Oct 14–21) | Tier 2 + Phase 4 | Teacher-student, second family, ensemble; final submission by Oct 21 |
+| Oct 22 | Buffer | Final submission deadline 11:59 PM UTC |
+
+Entry/team-merger deadline: **October 15** — accept rules before then.
+
+---
+
+## 9. Decision Gates (the plan stops here if these fail)
+
+1. **Phase 1:** extractor agreement vs gold-58. If our labeler < 0.85, stop and fix labels —
+   no model recovers from bad targets.
+2. **Phase 2 probe:** measured throughput. If 1 epoch projects beyond the unit budget,
+   cut resolution or family count before committing.
+3. **Phase 2 OOF:** single family ≥ 0.93 on scanner-grouped OOF. Below → labels/pipeline bug, not capacity.
+4. **Phase 4:** every ensemble member must *disagree* with existing members (ρ < 0.9).
+   Agreeing members add nothing — skip them.
+
+---
+
+## 10. Docs & Discipline
+
+- `EXECUTION_PROTOCOL.md` — pre-flight checklist, kill gates, gotcha list, clearance rule.
+  **No GPU run starts without Muse's clearance.**
+- `docs/run-log.md` — every GPU run logged: date, notebook version, config, probe numbers,
+  projected vs actual runtime, metric, artifacts.
+- `docs/` — the four research briefs backing every claim in this scope.
