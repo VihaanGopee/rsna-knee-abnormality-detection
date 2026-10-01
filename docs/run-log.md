@@ -74,3 +74,15 @@ Every GPU/CPU run goes here: what was run, the version ID, key output, and the d
   no-op, tmp cleanup. (The sandbox run also proved the 3 GB disk guard fires
   correctly when disk is actually low.)
 - Nothing was lost: run A died before writing any shard, so v5 restarts clean.
+
+## 2026-10-01 — Phase 0 v5 run B COMPLETE (1469 studies, 0 failures)
+
+- Range [1469, 2938): audit 285 series (0 header failures), smoke 5/5, probe
+  20/20 (0.60h projected; 16.5 GB compressed projected vs 21.7 uncompressed).
+- Build: 15 shards, 12.02 GB total, wall 0.50h, failures=0.
+- Verify: (a) determinism 15/15 PASS, (b) checksum integrity 4407/4407 arrays
+  PASS, (c) 144,350 slices; planes sagittal/coronal/axial x 1469 each.
+- 1128/4407 plane-images (25.6%) are fallback (non-FS) selections — recorded in
+  manifest for Phase 2.
+- Actual 12.02 GB < probe's 16.5 GB projection: 100-study shards compress
+  better than per-study probe archives (conservative gate, as designed).
