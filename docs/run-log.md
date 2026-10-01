@@ -100,3 +100,20 @@ Every GPU/CPU run goes here: what was run, the version ID, key output, and the d
   20 GB/run cap. Two studies have partial planes (by design — kept with usable
   planes, recorded in manifests). Phase-1 loader MUST tolerate missing planes.
 - Next: 3 Kaggle Datasets (one per range output), then Phase 1 (weak labels).
+
+## 2026-10-01 — Phase 1 label-extraction notebook built (phase1-labels-v1)
+
+- Design: closed-vocabulary LLM descriptor extraction (12 targets) + deterministic
+  isotonic calibration on the 58 gold studies. No public label tables (contamination).
+- Engine: vLLM + Qwen3-14B-AWQ primary; transformers + bnb-4bit Qwen3-14B fallback.
+  Same 14B weights either way; thinking mode disabled; latin-1 CSV read; reports
+  deduped by text hash (~4,273 unique); one repair retry; failures -> not_mentioned.
+- `src/phase1/label_core.py`: 37 local unit tests green (prompt, JSON parse incl.
+  think-tag stripping, aliases, PAVA isotonic, AUC vs brute force).
+- Full e2e with mock engine on 200-study fake CSV: dedupe mapping, retry path,
+  resume, CSV/manifest/calibration writes all verified. E2e caught 2 real bugs:
+  gold_df snapshot taken before _hash column existed (KeyError); retry leaving
+  None records on double parse failure.
+- Gates (probe): macro AUC >= 0.86 vs gold, parse-fail < 15%, projected full < 8h.
+- Next: Justin runs MODE="probe" on Kaggle GPU. Only after PASS: MODE="full",
+  then a Kaggle Dataset `rsna-knee-phase1-weak-labels-v1`.
