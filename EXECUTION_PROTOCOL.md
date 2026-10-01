@@ -67,3 +67,35 @@ Each GPU run records: date, notebook version (git hash), config summary, probe
 throughput, projected vs actual runtime, kill-gate status, final metric, and
 artifact locations. The log lives in `docs/run-log.md`. No run is "just a quick test" —
 untracked runs are how mistakes hide.
+
+## 8. Version gate (Justin's design — refined)
+
+Every notebook carries an embedded version ID. Justin confirms it with a variable
+(no `input()` — the notebook must run unattended after one manual edit):
+
+```python
+# === STEP 0: VERSION CONFIRMATION (edit this, then Run All) ===
+# Muse's message says the current version is: "phase2a-dinov2-v3"
+# Copy it EXACTLY below. Notebook refuses to run on mismatch.
+CONFIRM_VERSION = "TYPE-VERSION-HERE"
+# ==============================================================
+
+NOTEBOOK_VERSION = "phase2a-dinov2-v3"  # embedded by Muse — do not edit
+NOTEBOOK_CHANGELOG = "v3: fixed lateral flip labels"  # one-line human changelog
+
+if CONFIRM_VERSION != NOTEBOOK_VERSION:
+    raise SystemExit(
+        f"VERSION MISMATCH — not cleared to run.\n"
+        f"Embedded: {NOTEBOOK_VERSION} / You typed: {CONFIRM_VERSION}\n"
+        f"Stop. Check Muse's message for the correct version ID."
+    )
+print(f"Version verified: {NOTEBOOK_VERSION} — {NOTEBOOK_CHANGELOG}")
+```
+
+Rules:
+- The default `"TYPE-VERSION-HERE"` never matches — a fresh upload cannot run without the edit.
+- The version ID comes from **Muse's clearance message**, never from inside the notebook.
+  (Reading the embedded ID out of the wrong file and typing it in defeats the gate —
+  copy from the message.)
+- The changelog line tells Justin *what changed*, not just the version string.
+- Works on the offline scoring notebook too (no internet needed).

@@ -34,6 +34,63 @@ overflow, **A100 reserve ~10–14h held for the single highest-leverage run**. F
 - Depends most on: (1) label quality, (2) ensemble diversity, (3) surviving the shakeup.
   A robust 0.945 can outrank a fragile 0.955 when the private board lands.
 
+## 0b. Verification Revisions — Round 2 (2026-09-30)
+
+Four verification tracks cross-checked the plan against primary sources. What changed:
+
+**Licenses — DINOv3: GO.** Custom "DINOv3 License" (Meta), commercial use permitted,
+attribution "Built with DINOv3" required. Weights are HF-gated: download once with a token,
+republish as a Kaggle Dataset (internet is OFF at scoring — no on-the-fly timm download).
+**Surprise: RadImageNet is the real license risk** (no stated license per competitor audit) —
+demoted from blend arm to **Tier-2 non-load-bearing only**. Fallback ranking if ever needed:
+DINOv2 (Apache-2.0) → SigLIP/SigLIP2 (Apache-2.0) → ConvNeXt (Apache-2.0).
+
+**Leaderboard — bar moved to 0.960** (Sep 28; was 0.957). 4,682 teams. Public LB = 30% of test,
+private = 70%. Shakeup fingerprints confirmed (492 teams @ 0.936, 163 @ 0.937; top public
+author warns of overfit). Score targets stand, but 0.95+ is now more clearly top-10 fringe.
+
+**Efficiency track — real, and worth a week-3 side bet.** Official formula verified:
+one extra inference hour ≈ 0.05 AUC. A 0.90 model finishing in 30 min beats a 0.94 8-hour
+ensemble. Prizes $7K/$6K/$5K. **Scott Willis is 3rd (0.958) with a small ResNet/EfficientNet
+@224 and ~5-min scoring** — small models compete; architecture size is not destiny.
+Plan: dedicated small/fast notebook in week 3, separate from the main ensemble. No rule
+conflict; final 2-selection split decided at the end.
+
+**Label effort reallocated (per-target ceilings, measured):**
+- **Synovitis is the ONLY completeness-capped target** (13/27 mentioned; ceiling 0.8076).
+  Route closed — accept it, don't burn effort.
+- **Effort goes to:** PF OA, Lateral OA, Medial OA, Fracture, Lateral Meniscus —
+  frequently mentioned but poorly extracted; LLM closed-vocab beats lexicons by +0.112 here,
+  the largest single available number.
+- **Already near-complete:** ACL (0.97–0.99), Effusion, Medial Meniscus, Baker's, Contusion.
+- **"Two graded findings can carry the entire target"** — Synovitis→0.90 = +0.14,
+  PF OA→0.93 = +0.10 of the +0.204 needed for +0.017 macro. Separation lives in the graded four.
+
+**Phase 1 concretized:**
+- Torres's exact prompt/tokens are unrecoverable (nobody reproduced 0.881), but the
+  **transferable invention is verified**: closed vocabulary → deterministic Python map
+  using measured positive rates. The number lives in the calibration table we build ourselves.
+- tranbadat2607's complete 771-line implementation (direct grading, 0.869) gives us the
+  working skeleton to adapt.
+- **Exit gate: ≥0.86 macro-agreement vs gold-58.** Hybrid calibration (LLM-corpus rates as
+  prior, gold-58 as check, shrink noisy cells toward corpus rate).
+- **Starts with a 100-report timing probe** — no public throughput data exists.
+  Qwen3-14B-AWQ + vLLM on Colab T4, ~3–8h estimated, inside the 20u budget.
+
+**Two tensions flagged (resolve by our own ablation, not by faith):**
+- (a) Forum consensus says masking noisy cells is dead — but that's masking on *low model
+  confidence*, a different operation from our abstain-masking on *report silence*.
+  Keep as a **gated experiment**, not an assumption.
+- (b) Forum says nothing above 288px beats 0.940; our briefs measured 224→336px at +0.017.
+  **Add 288-vs-336 to the probe ablation.** Don't assume.
+
+**Grayscale → DINOv2: settled.** Replicate to 3 channels + ImageNet mean/std. Universal
+standard; zero public evidence for anything exotic.
+
+**New closed routes (don't re-run):** Synovitis reader improvements, DINOv2-as-second-family
+in one setup (−0.035/−0.148), 288px geometry assumed optimal, per-finding blend weights,
+self-distillation on a leaking rig.
+
 ---
 
 ## 1. The Problem, Precisely
