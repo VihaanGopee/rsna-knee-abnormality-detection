@@ -27,3 +27,21 @@ Every GPU/CPU run goes here: what was run, the version ID, key output, and the d
   fallback count. Laterality policy set to `none_tag_absent` (tag absent 100%).
 - Expected: probe 20/20, projected build ~2.5h, then full build + verification.
 - Justin to confirm smoke PNGs look anatomically correct (knee centered, 3 planes).
+
+## 2026-10-01 — Phase 0 v2 run ABORTED: /kaggle/working 20 GB cap
+
+- v2 build was progressing cleanly (350/4407, 0 failures, ETA 1.9h) when the
+  assistant caught the storage math: shards run ~1.07–1.27 GB per 100 studies →
+  full cache ~52 GB, but `/kaggle/working` persists only 20 GB per notebook output
+  (verified from multiple recent sources). The run would have died around study
+  ~1,700. Justin told to kill it immediately — no partial output is salvageable.
+- Fix: v3 (`phase0-preprocess-v3`, cache `_u8_v4`) splits the build into 3 ranges
+  of 1,469 studies (Run A: 0–1469, Run B: 1469–2938, Run C: 2938–4407), each its
+  own `/kaggle/working` output → its own Kaggle Dataset (~17 GB uncompressed,
+  ~8 GB deflate-compressed each). Shards use `np.savez_compressed`; a disk guard
+  stops before a shard write under 3 GB free; the probe projects uncompressed
+  output and hard-stops if >19 GB. Decoded bytes are identical across ranges —
+  training attaches all three datasets.
+- Justin can run 2 of the 3 ranges concurrently (independent OUT_DIRs, no shared
+  state). Each range ~40 min. After all three: create the 3 datasets from the
+  notebook outputs (names printed by the notebook's dataset-metadata cell).
