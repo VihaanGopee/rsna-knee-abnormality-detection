@@ -56,3 +56,21 @@ Every GPU/CPU run goes here: what was run, the version ID, key output, and the d
   identical) compresses each probe study's volumes with `np.savez_compressed`
   into a BytesIO and projects *measured compressed* bytes. The 19 GB gate now
   decides on what actually lands on disk.
+
+## 2026-10-01 — Phase 0 v3 run A crashed on first shard write (my bug, my miss)
+
+- Run A ([0, 1469)) passed audit/smoke/probe (20/20, 0.59h projected, 17.7 GB
+  uncompressed — under the old gate) and built 50 studies, then died in
+  `flush_shard()`: it called `(OUT_DIR/name).stat()` BEFORE `os.replace(tmp, ...)`,
+  so the file didn't exist at the final path yet -> FileNotFoundError.
+- I had identified this exact defect from the patch transcript before v3 shipped
+  and failed to fix it. Owned.
+- Fix: v5 (`phase0-preprocess-v5`, cache `_u8_v4` unchanged — shard contents
+  identical, only write ordering changed) renames first, then stats. Also cleans
+  stale `*.tmp` files at startup.
+- Validation this time was real: extracted the actual `flush_shard` from the
+  notebook and executed it in a temp dir — first-ever shard write, reload, 9/9
+  sha256 checksums match, manifest updated, size accounting correct, empty-flush
+  no-op, tmp cleanup. (The sandbox run also proved the 3 GB disk guard fires
+  correctly when disk is actually low.)
+- Nothing was lost: run A died before writing any shard, so v5 restarts clean.
