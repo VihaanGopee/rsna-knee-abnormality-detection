@@ -86,3 +86,17 @@ Every GPU/CPU run goes here: what was run, the version ID, key output, and the d
   manifest for Phase 2.
 - Actual 12.02 GB < probe's 16.5 GB projection: 100-study shards compress
   better than per-study probe archives (conservative gate, as designed).
+
+## 2026-10-01 — Phase 0 COMPLETE: all 3 ranges built (4407 studies, 0 failures)
+
+- Run A [0,1469) v5: 1469 studies, 0 failures, 12.30 GB, determinism PASS,
+  checksums 4406/4406 PASS. One study missing sagittal plane (1468/1469/1469).
+  1067 fallback plane-images.
+- Run B [1469,2938) v5: 1469 studies, 0 failures, 12.02 GB, determinism 15/15,
+  checksums 4407/4407 PASS. All planes complete. 1128 fallbacks.
+- Run C [2938,4407) v5: 1469 studies, 0 failures, 12.11 GB, determinism PASS,
+  checksums 4405/4405 PASS. One study axial-only (1468/1468/1469). 1037 fallbacks.
+- Total: 4407/4407 studies, 0 failed, ~36.4 GB across 3 outputs, all under the
+  20 GB/run cap. Two studies have partial planes (by design — kept with usable
+  planes, recorded in manifests). Phase-1 loader MUST tolerate missing planes.
+- Next: 3 Kaggle Datasets (one per range output), then Phase 1 (weak labels).
