@@ -148,21 +148,28 @@ Justin studied Soheil Ayati's 2nd-place Biohub writeup and asked for that same i
 - Median 30 slices/series (range 20–45), median 5 series/study (range 3–14)
 - Intensity max spans 690…8,736 across series (**12.7× range**) → per-series windowing is mandatory
 - Headers are de-identified: **no site label exists**
-- Axial fluid-sensitive series exists for **100% of studies** — the guaranteed fallback
+- ~~Axial fluid-sensitive series exists for 100% of studies~~ — probe 2026-10-01: 3/20
+  studies had no *detectable* FS series (de-identification leaves `dummyseriesdesc` on
+  ~15% of series; TE/TR sometimes missing). Series selection is now **FS-preferred
+  with best-available fallback** — never drop a study for missing FS signal.
 
 **Preprocessing recipe (consensus, verified):**
 1. pydicom (+pylibjpeg); apply RescaleSlope/Intercept; invert MONOCHROME1
 2. **Sort slices by IPP·(IOP_row × IOP_col), NEVER by filename** — filename order has Spearman ρ = −0.012 vs true order; silently destroys 2.5D triplets while loss still falls
 3. Per-series 1st–99th percentile clip → [0,1] (never a global window)
-4. Resample to fixed mm/px; 130mm anatomical crop; mirror R knees to L; quantize uint8 into sharded cache
-   - **Laterality note (verified 2026-09-30):** the R→L mirror is *canonicalization*, not
-     augmentation — the anatomical medial meniscus lands on the canonical medial side, so
-     **no Medial/Lateral label swap is needed**. The swap requirement applies only to
-     *random* horizontal-flip augmentation, which stays **OFF** everywhere because the
-     cache is already canonicalized. Do not "fix" this by adding a swap.
-   - Laterality source tag and fallback (if tag missing) to be confirmed in the DICOM audit.
-5. Series selection: **one fluid-sensitive series per plane** (sagittal/coronal/axial), same function at train and inference
-6. Host's `Fluid_Sensitive`/`Fat_Suppression` flags are degenerate in train — recover contrast from ScanningSequence/SeriesDescription/TR/TE. `Anatomical_Plane` is 100% trustworthy.
+4. Resample to fixed mm/px; 130mm anatomical crop; **no laterality canonicalization**; quantize uint8 into sharded cache
+   - **Laterality note (CORRECTED 2026-10-01 by real Kaggle DICOM audit):** `ImageLaterality`
+     is absent in **100% of series** — the R→L mirror assumption from public reports was
+     wrong for this data. Canonicalization is **OFF**; laterality is never guessed
+     (a partial/canonicalized mix would be worse than none). The cache therefore
+     contains both L and R knees and the model learns both orientations naturally.
+     Random horizontal flips stay **OFF** everywhere. Cache version segment `_latnone`.
+   - SeriesDescription carries laterality tokens (`lt`/`right`) on only ~11% of series —
+     too sparse and unreliable to canonicalize on.
+5. Series selection: **one series per plane (sagittal/coronal/axial), FS-preferred with
+   best-available fallback**, same function at train and inference; per-plane
+   `selection` (`fs`/`fallback`) recorded in the manifest
+6. Host's `Fluid_Sensitive`/`Fat_Suppression` flags are degenerate in train — recover contrast from ScanningSequence/SeriesDescription/TR/TE. ~~`Anatomical_Plane` is 100% trustworthy~~ — **WRONG:** `Anatomical_Plane` is present in 0.00% of series (not a real DICOM tag); plane is derived geometrically from IOP. The notebook's `plane_from_iop` handles this.
 
 **Fold grouping key (scanner fingerprint):** Manufacturer + Model + SoftwareVersions + MagneticFieldStrength + ImagingFrequency rounded to 2 decimals → 178 usable groups. (Raw precision = 8,618 near-unique = grouped-KFold in disguise.)
 
