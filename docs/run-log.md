@@ -45,3 +45,14 @@ Every GPU/CPU run goes here: what was run, the version ID, key output, and the d
 - Justin can run 2 of the 3 ranges concurrently (independent OUT_DIRs, no shared
   state). Each range ~40 min. After all three: create the 3 datasets from the
   notebook outputs (names printed by the notebook's dataset-metadata cell).
+
+## 2026-10-01 — Phase 0 v3 run B gated (gate was too conservative)
+
+- Run B ([1469, 2938)) passed audit/smoke/probe (20/20, 0 failures, 0.66h
+  projected) but the v3 size gate tripped: projected 21.7 GB *uncompressed* > 19.
+  The gate measured the wrong thing — shards are deflate-compressed on disk, so
+  real output is roughly half the uncompressed projection.
+- Fix: v4 (`phase0-preprocess-v4`, cache `_u8_v4` unchanged — decoded bytes
+  identical) compresses each probe study's volumes with `np.savez_compressed`
+  into a BytesIO and projects *measured compressed* bytes. The 19 GB gate now
+  decides on what actually lands on disk.
