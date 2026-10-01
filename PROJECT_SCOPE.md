@@ -155,6 +155,12 @@ Justin studied Soheil Ayati's 2nd-place Biohub writeup and asked for that same i
 2. **Sort slices by IPP·(IOP_row × IOP_col), NEVER by filename** — filename order has Spearman ρ = −0.012 vs true order; silently destroys 2.5D triplets while loss still falls
 3. Per-series 1st–99th percentile clip → [0,1] (never a global window)
 4. Resample to fixed mm/px; 130mm anatomical crop; mirror R knees to L; quantize uint8 into sharded cache
+   - **Laterality note (verified 2026-09-30):** the R→L mirror is *canonicalization*, not
+     augmentation — the anatomical medial meniscus lands on the canonical medial side, so
+     **no Medial/Lateral label swap is needed**. The swap requirement applies only to
+     *random* horizontal-flip augmentation, which stays **OFF** everywhere because the
+     cache is already canonicalized. Do not "fix" this by adding a swap.
+   - Laterality source tag and fallback (if tag missing) to be confirmed in the DICOM audit.
 5. Series selection: **one fluid-sensitive series per plane** (sagittal/coronal/axial), same function at train and inference
 6. Host's `Fluid_Sensitive`/`Fat_Suppression` flags are degenerate in train — recover contrast from ScanningSequence/SeriesDescription/TR/TE. `Anatomical_Plane` is 100% trustworthy.
 
