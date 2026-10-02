@@ -138,3 +138,11 @@ Every GPU/CPU run goes here: what was run, the version ID, key output, and the d
 - v8 (`phase1-labels-v8`, commit c494d3066fd0): batch 4->8, tokens 3000->2500,
   stronger JSON-only instruction, multilingual cues + clearer definitions for
   the 5 weakest labels. Targets all three gates.
+
+## 2026-10-01 — Phase 1 v8 probe: prompt tweaks changed nothing; v9 tries 14B-AWQ
+- v8 probe: AUC 0.7874 (v7: 0.8011 — WORSE), parse 17% (unchanged), 10.46s/report
+  (batch 8 gave ZERO speedup over batch 4). Prompt engineering is exhausted;
+  8B has hit its capability ceiling. The 0.86 gate needs a bigger model.
+- v9 (`phase1-labels-v9`, commit df5cdd089ad2): tries Qwen/Qwen3-14B-AWQ first
+  (pre-quantized 4-bit ~7GB, uses AWQ loader not the broken bnb path). Falls back
+  to 8B FP16 automatically if AWQ fails. Log will show which model ran.
