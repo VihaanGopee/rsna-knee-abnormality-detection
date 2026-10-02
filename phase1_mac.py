@@ -206,14 +206,21 @@ def main():
     os.makedirs(OUT_DIR, exist_ok=True)
     print(f"Model: {MODEL} | Mode: {args.mode}")
 
-    # Load train.csv
+    # Load train.csv (columns: StudyInstanceUID, Report, 12 label columns; latin-1 encoding)
     studies = {}  # study_id -> (report, labels dict)
-    with open(TRAIN_CSV, newline="", encoding="utf-8") as f:
+    with open(TRAIN_CSV, newline="", encoding="latin-1") as f:
         reader = csv.DictReader(f)
         for row in reader:
-            sid = row["study_id"]
-            report = row.get("report", "") or ""
-            labels = {lbl: int(row[lbl]) for lbl in LABELS if lbl in row}
+            sid = row["StudyInstanceUID"]
+            report = row.get("Report", "") or ""
+            labels = {}
+            for lbl in LABELS:
+                v = row.get(lbl, "")
+                if v not in ("", None):
+                    try:
+                        labels[lbl] = int(float(v))
+                    except ValueError:
+                        pass
             studies[sid] = (report, labels)
     print(f"studies: {len(studies)}")
 
