@@ -117,3 +117,14 @@ Every GPU/CPU run goes here: what was run, the version ID, key output, and the d
 - Gates (probe): macro AUC >= 0.86 vs gold, parse-fail < 15%, projected full < 8h.
 - Next: Justin runs MODE="probe" on Kaggle GPU. Only after PASS: MODE="full",
   then a Kaggle Dataset `rsna-knee-phase1-weak-labels-v1`.
+
+## 2026-10-01 — Phase 1 v6 probe FAILED (quantization not applied); v7 built
+- v6 probe: 14B 4-bit OOM'd at 14.3GB (should be ~7GB). The OOM fallback to 8B
+  ALSO OOM'd. Root cause: transformers 5.0.0's new core_model_loading.py
+  pipeline does NOT apply BitsAndBytes 4-bit quantization during load — both
+  models materialized in full precision. Not a device_map problem.
+- v7 (`phase1-labels-v7`, commit 9d1579bfda06): DROPS quantization entirely.
+  Qwen3-8B in FP16 (~16GB) with device_map="auto" + max_memory 13GiB/GPU.
+  No vLLM, no bitsandbytes. Simple and guaranteed to fit on 2xT4 (29GB).
+- Quality risk: 8B vs 14B. If probe AUC < 0.86, 14B FP16 (28GB, tight) or
+  other options will be evaluated. 8B is the working baseline first.
