@@ -128,3 +128,13 @@ Every GPU/CPU run goes here: what was run, the version ID, key output, and the d
   No vLLM, no bitsandbytes. Simple and guaranteed to fit on 2xT4 (29GB).
 - Quality risk: 8B vs 14B. If probe AUC < 0.86, 14B FP16 (28GB, tight) or
   other options will be evaluated. 8B is the working baseline first.
+
+## 2026-10-01 — Phase 1 v7 probe ran (model works, all gates failed); v8 built
+- v7 probe (Qwen3-8B FP16): model loaded (16.4GB), 100 reports in 1050s.
+  Results: macro AUC 0.8011 (gate 0.86), parse fail 17% (gate <15%),
+  10.5s/report -> 12.47h projected (gate <8h). ALL THREE GATES FAILED.
+- Per-label AUC: ACL 0.937, MM 0.913, Baker's 0.895 (good); Synovitis 0.625,
+  Fracture 0.674, Contusion 0.733, Effusion 0.755, PF OA 0.759 (weak).
+- v8 (`phase1-labels-v8`, commit c494d3066fd0): batch 4->8, tokens 3000->2500,
+  stronger JSON-only instruction, multilingual cues + clearer definitions for
+  the 5 weakest labels. Targets all three gates.
