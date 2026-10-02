@@ -196,11 +196,11 @@ def _pava_predict(levels, x):
 
 # ---------------------------------------------------------------- main
 def main():
+    global MODEL
     ap = argparse.ArgumentParser()
     ap.add_argument("--mode", choices=["probe", "full"], required=True)
     ap.add_argument("--model", default=MODEL)
     args = ap.parse_args()
-    global MODEL
     MODEL = args.model
 
     os.makedirs(OUT_DIR, exist_ok=True)
