@@ -146,3 +146,38 @@ Every GPU/CPU run goes here: what was run, the version ID, key output, and the d
 - v9 (`phase1-labels-v9`, commit df5cdd089ad2): tries Qwen/Qwen3-14B-AWQ first
   (pre-quantized 4-bit ~7GB, uses AWQ loader not the broken bnb path). Falls back
   to 8B FP16 automatically if AWQ fails. Log will show which model ran.
+
+## 2026-10-02 — Research complete; v10 built (one-and-done plan)
+Four parallel research tracks completed overnight:
+
+1. **35B JSON failure: SOLVED.** Root cause: Qwen3.5-35B-A3B routes its entire
+   response to the `reasoning_content` API field when thinking is enabled,
+   leaving `message.content` empty. The script read only `content` -> 100%
+   parse fail. Fix: use Ollama `/api/chat` with `"think": false`. Not a model
+   capability issue. (But Mac is still too slow for full run: 10-12h even fixed.)
+
+2. **Platform strategy:** #1 pick is `unsloth/Qwen3-14B-unsloth-bnb-4bit` on
+   Kaggle (pre-quantized 4-bit, bypasses the transformers v5 bnb bug, ~7GB,
+   ~4h for full run, $0). #2 is GPT-4o-mini API (~$2, <1h, 0.86-0.90 AUC).
+   The v5 bnb bug is a confirmed upstream regression (issue #43032).
+
+3. **Pipeline failure modes (P0):**
+   - The 0.86 AUC gate is statistically meaningless with n=58 (95% CI +-0.04;
+     0.86 is 3.6 sigma from measured 0.79). Replaced with 0.80 sanity threshold.
+   - `extract_json` took FIRST JSON not last (draft-then-correct -> uses draft).
+   - Non-English output terms silently became `not_mentioned`.
+   - Braces in prose before JSON killed the whole report.
+   - `not_mentioned` prior from gold may be inflated for full population.
+   All parser bugs fixed in v10.
+
+4. **Phase 2 readiness:** Do NOT train on 0.79 labels (teacher bounds student).
+   CoAtNet > DINOv2 (measured 0.91-0.92 vs 0.84). No horizontal flips
+   (laterality). Scanner-grouped folds needed (random K-fold inflates +0.087).
+   8x gold weight, abstain masking, ASL loss. One model first, then ensemble.
+
+v10 (`phase1-labels-v10`, commit ef0367c602da):
+- unsloth/Qwen3-14B-unsloth-bnb-4bit (pre-quantized, ~7GB, one T4)
+- All 3 P0 parser bugs fixed
+- Multilingual term aliases added
+- AUC gate: 0.80 sanity threshold (honest about n=58 limits)
+- MAX_NEW_TOKENS 200 (was 320), BATCH_SIZE 4 (conservative for 7GB model)
