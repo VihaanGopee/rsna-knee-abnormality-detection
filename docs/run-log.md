@@ -181,3 +181,12 @@ v10 (`phase1-labels-v10`, commit ef0367c602da):
 - Multilingual term aliases added
 - AUC gate: 0.80 sanity threshold (honest about n=58 limits)
 - MAX_NEW_TOKENS 200 (was 320), BATCH_SIZE 4 (conservative for 7GB model)
+
+## 2026-10-02 — v10 probe failed (missing bnb install); v11 built
+- v10 probe: `unsloth/Qwen3-14B-unsloth-bnb-4bit` failed at load with
+  `ImportError: Using bitsandbytes 4-bit quantization requires bitsandbytes`.
+  The pre-quantized weights still need bnb installed for the 4-bit linear ops
+  (not for runtime quantization — that path is bypassed). My mistake: v10
+  removed the bnb install entirely.
+- v11 (`phase1-labels-v11`, commit 59843462450d): adds `pip install bitsandbytes`
+  back. Everything else identical to v10.
