@@ -259,6 +259,8 @@ def main():
             out = call_ollama(prompt)
             obj = extract_json(out)
             if obj is None:
+                if i < 3:  # debug: show raw output for first 3 failures
+                    print(f"\n--- RAW OUTPUT (report {i}) ---\n{out[:800]}\n--- END ---\n")
                 parse_fails += 1
                 # retry once
                 out = call_ollama(prompt)
