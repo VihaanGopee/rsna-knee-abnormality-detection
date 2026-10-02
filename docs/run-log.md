@@ -190,3 +190,9 @@ v10 (`phase1-labels-v10`, commit ef0367c602da):
   removed the bnb install entirely.
 - v11 (`phase1-labels-v11`, commit 59843462450d): adds `pip install bitsandbytes`
   back. Everything else identical to v10.
+
+## 2026-10-02 — v12 probe OOM'd (single-GPU pin); v13 built
+- v12 probe: 14B loaded fine (10.9GB) but OOM'd during extraction:
+  `device_map={"": 0}` pinned everything to GPU 0, ignoring the second T4.
+- v13 (`phase1-labels-v13`): `device_map="auto"` so accelerate splits the
+  model across both T4s, leaving room for KV cache + activations.
