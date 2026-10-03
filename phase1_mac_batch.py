@@ -93,6 +93,8 @@ For each report and each of the 12 findings, choose the SINGLE allowed term that
 - Negated findings ("no tear", "sin rotura", "pas de déchirure", "kein Riss") map to the intact/absent/none term.
 - Uncertain/hedged language ("possible", "cannot exclude", "suggestive of") still maps to the matching positive term.
 - If a finding is present without a grade, use the mildest positive term.
+- CRITICAL for osteoarthritis (moa/loa/pfoa): only assign a grade to a compartment if the report describes findings IN THAT COMPARTMENT (names it or describes location-specific changes). General "arthritis", "degenerative changes", or "chondrosis" without a clear location → "not_mentioned" for all three OA compartments. Do NOT guess the compartment.
+- CRITICAL: if the report explicitly says a structure is normal ("cartilage appears congruent", "no chondral lesion"), use the intact/none term. Do NOT output a positive term for explicitly normal findings.
 
 Findings and allowed terms:
 {vocab_block()}

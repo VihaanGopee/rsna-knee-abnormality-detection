@@ -214,3 +214,14 @@ v10 (`phase1-labels-v10`, commit ef0367c602da):
   format (25 tokens vs 150). device_map="auto" across both T4s.
 - If probe shows ~0.80+ AUC and ~11s/report (~13h), full run splits into
   2 chunks of ~6.5h each (proven chunking pattern from Phase 0).
+
+## 2026-10-03 — Mac batch script built (phase1_mac_batch.py)
+- Justin chose Mac overnight over chunked Kaggle / Colab / teacher-student.
+- New script (not a patch of phase1_mac.py): batches 5 reports per Ollama
+  /api/chat call (think:false), compact 12-term output, auto-fallback to
+  single-report on batch parse failure, incremental JSONL save (resume-safe).
+- Tested locally with mocked Ollama: batching, parsing edge cases (trailing
+  comma, numbered lines, unknown terms), probe gates, resume (0 redundant
+  calls), full-mode outputs (weak_labels_v1.csv 13 cols, descriptors.jsonl,
+  manifest.json, isotonic calibration). All pass.
+- Probe: 100 reports (~12 min), gate AUC>=0.78. Full: 856 batches, ~7-9h.
