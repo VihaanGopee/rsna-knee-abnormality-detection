@@ -196,3 +196,12 @@ v10 (`phase1-labels-v10`, commit ef0367c602da):
   `device_map={"": 0}` pinned everything to GPU 0, ignoring the second T4.
 - v13 (`phase1-labels-v13`): `device_map="auto"` so accelerate splits the
   model across both T4s, leaving room for KV cache + activations.
+
+## 2026-10-02 — v14 built (free path, no API)
+- Justin refused any API spending. API path dead.
+- v14 (`phase1-labels-v14`): unsloth/Qwen3-8B-unsloth-bnb-4bit on ONE GPU
+  (device_map={"": 0}; ~5GB, no split overhead) + compact output format
+  (12 comma-separated terms, ~25 tokens vs ~150 for JSON).
+- New parse_output(): tries compact first, falls back to JSON extraction.
+- Projected: ~3s/report -> ~3.5h for 4,276 (vs 47h for 14B).
+- Quality risk: v7's 8B got 0.801 AUC; probe will verify >= 0.80 gate.
