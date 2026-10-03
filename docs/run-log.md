@@ -205,3 +205,12 @@ v10 (`phase1-labels-v10`, commit ef0367c602da):
 - New parse_output(): tries compact first, falls back to JSON extraction.
 - Projected: ~3s/report -> ~3.5h for 4,276 (vs 47h for 14B).
 - Quality risk: v7's 8B got 0.801 AUC; probe will verify >= 0.80 gate.
+
+## 2026-10-03 — v14 probe failed (8B inadequate); v15 built
+- v14 probe (log phase1__4.log): 8B 4-bit + compact format -> macro AUC 0.683,
+  24% parse failures, 16.9s/report (20.1h projected). All gates failed.
+  The 8B cannot follow the format or read the reports well enough. Dead end.
+- v15 (`phase1-labels-v15`): back to 14B (proven 0.827) + compact output
+  format (25 tokens vs 150). device_map="auto" across both T4s.
+- If probe shows ~0.80+ AUC and ~11s/report (~13h), full run splits into
+  2 chunks of ~6.5h each (proven chunking pattern from Phase 0).
