@@ -259,9 +259,14 @@ def main():
     print(f"\nmacro AUC (rank-based) vs gold: {macro:.4f}" if macro else
           "\nmacro AUC: undefined", flush=True)
     print(f"parse-fail rate: {pf:.1%}", flush=True)
-    # rough cost (gpt-4o-mini ~ $0.15/1M in, $0.60/1M out — verify current pricing)
+    # rough cost (verify current pricing — these are approximate)
+    RATES = {
+        "gpt-4o-mini": (0.15, 0.60),
+        "gpt-4o": (2.50, 10.00),
+    }
+    r_in, r_out = RATES.get(MODEL, (0.15, 0.60))
     print(f"tokens used: {tot_in} in / {tot_out} out "
-          f"(~${tot_in/1e6*0.15 + tot_out/1e6*0.60:.4f} at gpt-4o-mini rates)",
+          f"(~${tot_in/1e6*r_in + tot_out/1e6*r_out:.4f} at {MODEL} rates)",
           flush=True)
     print(f"\nMac qwen3:14b probe for comparison: macro AUC 0.7530, "
           f"parse-fail 5%", flush=True)
