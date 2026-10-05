@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-"""Phase 1 FINISH via Gemini 2.5 Flash: label the remaining ~222 reports that
+"""Phase 1 FINISH via Gemini 3.8 Flash: label the remaining ~222 reports that
 OpenAI credits + ChatAnywhere points ran out on, then merge all three
 sources into the final weak_labels_v1.csv.
 
 - Reads ./phase1_openai_out/records.jsonl (3,320 GPT-4.1 via OpenAI)
 - Reads ./phase1_hybrid_out/ca_records.jsonl (734 GPT-4.1 via ChatAnywhere)
-- Labels the remaining ~222 via Gemini 2.5 Flash (same prompt/parsing)
+- Labels the remaining ~222 via Gemini 3.8 Flash (same prompt/parsing)
 - Rotates across multiple API keys to stay under free-tier limits
 - Resume-safe: Gemini progress in ./phase1_final_out/gemini_records.jsonl
 - Final merged outputs in ./phase1_final_out/
@@ -136,13 +136,15 @@ class KeyRotator:
 def gemini_chat(prompt, key):
     url = (f"https://generativelanguage.googleapis.com/v1beta/models/"
            f"{MODEL}:generateContent?key={key}")
+    # Lite models (gemini-*-flash-lite) reject temperature and numeric
+    # thinking budgets — strip them, keep only maxOutputTokens.
+    gen_config = {"maxOutputTokens": 2048}
+    if "lite" not in MODEL:
+        gen_config["temperature"] = 0.0
+        gen_config["thinkingConfig"] = {"thinkingBudget": 0}
     body = {
         "contents": [{"parts": [{"text": prompt}]}],
-        "generationConfig": {
-            "temperature": 0.0,
-            "maxOutputTokens": 2048,
-            "thinkingConfig": {"thinkingBudget": 0},
-        },
+        "generationConfig": gen_config,
     }
     last_err = None
     for attempt in range(3):
@@ -231,12 +233,16 @@ def parse_batch_output(text, n):
 
 
 def main():
+    global MODEL
     ap = argparse.ArgumentParser()
     ap.add_argument("--csv", default="./train.csv")
+    ap.add_argument("--model", default=MODEL)
     ap.add_argument("--openai-records", default=OPENAI_RECORDS)
     ap.add_argument("--ca-records", default=CA_RECORDS)
     ap.add_argument("--out", default=OUT_DIR)
     args = ap.parse_args()
+    MODEL = args.model
+    print(f"model: {MODEL}", flush=True)
 
     raw_keys = os.environ.get("GEMINI_API_KEYS", "").strip()
     keys = [k.strip() for k in raw_keys.split(",") if k.strip()]

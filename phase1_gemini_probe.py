@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Phase 1 probe via Gemini 2.5 Flash: quality check before using it for the
+"""Phase 1 probe via Gemini 3.8 Flash: quality check before using it for the
 remaining ~222 reports.
 
 Same 100 reports, same prompt, same rank-AUC vs 58 gold as the OpenAI probe,
@@ -122,13 +122,15 @@ class KeyRotator:
 def gemini_chat(prompt, key):
     url = (f"https://generativelanguage.googleapis.com/v1beta/models/"
            f"{MODEL}:generateContent?key={key}")
+    # Lite models (gemini-*-flash-lite) reject temperature and numeric
+    # thinking budgets — strip them, keep only maxOutputTokens.
+    gen_config = {"maxOutputTokens": 2048}
+    if "lite" not in MODEL:
+        gen_config["temperature"] = 0.0
+        gen_config["thinkingConfig"] = {"thinkingBudget": 0}
     body = {
         "contents": [{"parts": [{"text": prompt}]}],
-        "generationConfig": {
-            "temperature": 0.0,
-            "maxOutputTokens": 2048,
-            "thinkingConfig": {"thinkingBudget": 0},
-        },
+        "generationConfig": gen_config,
     }
     last_err = None
     for attempt in range(3):
