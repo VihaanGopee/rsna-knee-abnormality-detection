@@ -218,9 +218,13 @@ def auc_score(y_true, y_score):
 
 
 def main():
+    global MODEL
     ap = argparse.ArgumentParser()
     ap.add_argument("--csv", default="./train.csv")
+    ap.add_argument("--model", default=MODEL)
     args = ap.parse_args()
+    MODEL = args.model
+    print(f"model: {MODEL}", flush=True)
 
     raw_keys = os.environ.get("GEMINI_API_KEYS", "").strip()
     keys = [k.strip() for k in raw_keys.split(",") if k.strip()]
