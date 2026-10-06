@@ -1,5 +1,5 @@
 # RSNA Knee Abnormality Detection — Winning Plan
-**Date:** 2026-10-06 | **Deadline:** Oct 22, 2026 11:59 PM UTC | **Budget:** 45 GPU-hours (T4×2)
+**Date:** 2026-10-06 | **Deadline:** Oct 22, 2026 11:59 PM UTC | **Budget:** 45 GPU-hours/week (T4×2) — ~90h over 16 days
 **Goal:** Maximize macro AUC. Target 0.92–0.95 (top 100). Stretch: 0.960+ (top 10).
 
 ---
@@ -254,7 +254,7 @@ def rank_mean(frames):
 
 **Realistic target: 0.92–0.95** (top 100–300)
 **Stretch: 0.960+** (top 10, needs everything + luck)
-**First (0.964):** Out of reach with 45h — leaders have 140h+ and private labels
+**First (0.964):** In play with 90h over 2 weeks + private-label iteration. The gap is execution, not resources.
 
 ---
 
