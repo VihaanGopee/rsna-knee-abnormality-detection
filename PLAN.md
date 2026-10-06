@@ -285,3 +285,58 @@ def rank_mean(frames):
 ---
 
 *If the winner's writeup doesn't match this plan, we know exactly where we diverged.*
+
+---
+
+## 10. Bug Saga (v4–v12) — Do Not Repeat
+
+| Version | Bug | Cost | Lesson |
+|---|---|---|---|
+| v4 | Scanner-proxy fold collapse (all UIDs same prefix → fold 0) | 15 min GPU | Test with real UID formats, not synthetic |
+| v5 | Rotation dtype: np.cos/sin → float64, grid_sample refused | 19 min GPU | Force float32 at every numpy→torch boundary |
+| v6 | coatnet_0_224 has no pretrained weights (silent random init) + 256px vs 224px native | 15 min GPU | Verify weights exist; match backbone native size |
+| v7 | Augment brightness: rng.rand() float64 → DoubleTensor crash | 15 min GPU | Same as v5 — audit ALL rng.* calls |
+| v8 | .view() on DataParallel tensors → CUDA misaligned address | 15 min GPU | Use .reshape(), never .view() under DP |
+| v9 | Sweep found last .view() (plane_mask) | 0 (proactive) | Systematic pattern sweep works |
+| v10 | DataParallel splits batch=2 → 1/GPU, CoAtNet kernels crash | 15 min GPU | Probe on single GPU; DP untested for full run |
+| v11 | OOM: 96 images/batch > 14.56GB T4 | 15 min GPU | N_SLICES 16→8 (48 images) |
+| v12 | Full run crashed (DataParallel, same as v10) | 10 min GPU | Disabled DP entirely; batch 2×8 accum |
+
+**Total wasted:** ~2 hours GPU. **Root cause:** Testing components in isolation, not the integrated pipeline.
+
+## 11. Kaggle Setup Checklist
+
+**Datasets to attach:**
+- [ ] `phase0runA`, `phase0runB`, `phase0runC` (preprocessed MRI shards)
+- [ ] `rsna-knee-phase1-weak-labels-v1` (weak_labels_v1.csv)
+- [ ] Competition data `rsna-knee-abnormality-detection` (train.csv, test/)
+- [ ] `rsna-knee-teacher-tables` (raptor_teacher.csv) — VERIFY ACCESSIBLE
+- [ ] Model checkpoints (stage2_best.pt as dataset for submission)
+
+**Notebook settings:**
+- [ ] Accelerator: GPU T4 ×2 (training) / T4 ×1 (inference)
+- [ ] Internet: ON (for timm pretrained weights)
+- [ ] Expected runtime: Training ~4h, Inference ~2-6h
+
+**Before each run:**
+- [ ] Check `VERSION:` string at top of log matches expected
+- [ ] Delete stale notebook, download fresh from GitHub
+- [ ] Verify all 5 datasets attached
+
+## 12. File Inventory (GitHub: VihaanGopee/rsna-knee-abnormality-detection)
+
+| File | Purpose |
+|---|---|
+| `notebooks/phase2-train.ipynb` | Training (v12, single-GPU) |
+| `notebooks/phase2-submit.ipynb` | Inference/submission (v1) |
+| `platt_calibration.py` | Per-finding bias correction |
+| `PLAN.md` | This document |
+| `phase1_*.py` | Phase 1 label extraction (archived) |
+
+## 13. Key Links
+
+- GitHub: https://github.com/VihaanGopee/rsna-knee-abnormality-detection
+- Competition: (RSNA Knee Abnormality Detection on Kaggle)
+- TianK003 repo: https://github.com/tiank003/rsna-kneemri-kaggle-competition
+- Deadline: Oct 22, 2026 11:59 PM UTC
+- Entry deadline: Oct 15, 2026 (VERIFY)
