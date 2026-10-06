@@ -105,15 +105,21 @@
 - [ ] Start synovitis surrogate re-extraction via API (parallel)
 
 ### Phase B — Core Training (Days 3–10, ~28 GPU-h)
-- [ ] Train 3× EfficientNet-B3 @ 288px:
+- [ ] Train 2× EfficientNet-B3 @ 288px:
   - 30 epochs, SWA last 3, LR 3e-4 (backbone) / 1e-3 (head)
   - Frozen BN, heavy augmentation, drop-path 0.1
   - AdamW, weight decay 0.02, warmup 10% + cosine decay
   - AMP enabled, grad clip 1.0, EMA 0.998
   - Batch 2, accum 2 (effective 4)
   - Different seeds
-  - (~7h each = 21h)
-- [ ] Train 1× CoAtNet full-fit (all 4,407 + all 58 gold, v12 recipe extended to 30 epochs + SWA) (~7h)
+  - (~7h each = 14h)
+- [ ] Train 1× ConvNeXt-Tiny @ 224px (architecture hedge):
+  - Same recipe as EfficientNet-B3 (30 epochs, SWA, etc.)
+  - Tests whether the "ConvNeXt no gain" finding was wrong
+  - Cross-family diversity > same-family repeats
+  - (~7h)
+- [ ] Use trained CoAtNet (v12, 0.846 gold-macro) as 4th member (no retrain needed)
+  - Total: 4 members, 3 families (EfficientNet, ConvNeXt, CoAtNet)
 
 ### Phase C — Ensemble & Push (Days 10–14, ~10 GPU-h)
 - [ ] Rank-average ensemble (per-label percentile ranks)
@@ -125,7 +131,9 @@
 - [ ] Select 2 final submissions by gold CV, NEVER by public LB alone
 - [ ] Submit before Oct 22, 11:59 PM UTC
 
-**Total: ~42 GPU-h** (3h buffer for retries/crashes)
+**Total: ~42 GPU-h** (3h buffer)
+
+**Architecture hedge rationale (2026-10-06):** Betting 21h on EfficientNet-B3 based on one competitor (rank 337) is a single point of failure. 2× EfficientNet + 1× ConvNeXt + 1× CoAtNet gives cross-family diversity with the same GPU cost. If EfficientNet-B3 underperforms, the ensemble survives.
 
 ---
 
