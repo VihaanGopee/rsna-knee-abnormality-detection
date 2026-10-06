@@ -1,5 +1,21 @@
 # RSNA Knee Abnormality Detection — Winning Plan
 **Date:** 2026-10-06 | **Deadline:** Oct 22, 2026 11:59 PM UTC | **Budget:** 45 GPU-hours/week (T4×2) — ~90h over 16 days
+
+## BASELINE RESULT (2026-10-06): 0.804 LB
+
+The CoAtNet baseline scored **0.804** on the leaderboard — well below the 0.88-0.93 expected range.
+Gap to first (0.964): **0.16**. This changes the strategy fundamentally.
+
+**What 0.804 tells us:**
+- CoAtNet + weak labels (0.8473) is not competitive at this level
+- Incremental improvements (+0.06-0.08) would reach ~0.86-0.88 — still far from 0.964
+- The architecture AND labels both need to change, not just get tuned
+
+**Revised strategy (2026-10-06 evening):**
+- **Primary:** EfficientNet-B3 @ 288px (the proven competitor recipe) + public teacher labels (0.8927 vs gold)
+- **CoAtNet:** demoted to ensemble diversity member only, not the lead
+- **Labels:** public teacher table (0.8927) replaces our 0.8473 labels as the base — this is now the #1 lever
+- **Target:** 0.90+ via better labels + proven architecture, then ensemble to 0.93-0.95 — ~90h over 16 days
 **Goal:** Maximize macro AUC. Target 0.92–0.95 (top 100). Stretch: 0.960+ (top 10).
 
 ---
@@ -46,9 +62,9 @@
 
 **Revised approach:**
 - Use **Platt scaling** (2-param logistic) instead of isotonic, OR skip calibration for findings with <15 positives
-- **Raptor label mix:** 0.5 LLM + 0.5 quantile-matched Raptor (biggest known lever)
-- **Verify Raptor dataset** (`rsna-knee-teacher-tables`) is accessible before committing GPU hours
-- Fallback: pure LLM labels if Raptor unavailable
+- **Teacher-label mix:** 0.5 LLM + 0.5 quantile-matched public teacher table (biggest known lever)
+- ~~**Verify Raptor dataset** (`rsna-knee-teacher-tables`)~~ — DEAD 2026-10-06: Raptor table is private/inaccessible. Replacement verified public: `stevenleehans/rsna-knee-llm-report-labels` (`llm_labels_v4_blend.csv`, 0.8927 vs gold, two independent measurements — beats our 0.8473)
+- Fallback: pure LLM labels if the public table is ever unavailable
 
 ### 3.3 Training Strategy
 - **3-fold ensemble** (not 5): captures 80% of gain at 60% cost
@@ -71,7 +87,7 @@
 | # | Risk | Severity | Fix |
 |---|---|---|---|
 | 1 | Isotonic on n=58 overfits | PLAN-KILLER | Use Platt scaling or skip for rare findings |
-| 2 | Raptor labels undefined | PLAN-KILLER | Verify dataset access BEFORE GPU spend; fallback to pure LLM |
+| 2 | Raptor table private (verified inaccessible 2026-10-06) | PLAN-KILLER → RESOLVED | Swapped to public `stevenleehans/rsna-knee-llm-report-labels` (`llm_labels_v4_blend.csv`, 0.8927 vs gold); verify gold-row independence before GPU spend; fallback to pure LLM |
 | 3 | 0.846 is mirage (±0.09) | HIGH | Baseline submission as hard decision gate with pre-committed thresholds |
 | 4 | EfficientNet recipe = single data point | MEDIUM | Keep CoAtNet as floor; architecture matters less than labels+ensemble |
 | 5 | 42h budget, 3h buffer fragile | MEDIUM | Checkpoint every epoch; prioritize: drop pseudo-labeling first, then 3rd fold |
@@ -87,7 +103,7 @@
 
 ### Phase 0 — IMMEDIATE (Day 1, 0 GPU-h)
 - [ ] Verify Oct 15 entry deadline (accept rules if not done)
-- [ ] Verify `rsna-knee-teacher-tables` dataset accessible
+- [x] ~~Verify `rsna-knee-teacher-tables`~~ — DEAD (private). Attach `stevenleehans/rsna-knee-llm-report-labels` instead
 - [ ] Build clean inference notebook (single-GPU, no DataParallel)
 - [ ] **Submit current CoAtNet model → get baseline LB**
 
@@ -97,10 +113,10 @@
 - LB < 0.88: STOP, reassess architecture/labels
 
 ### Phase A — Labels (Days 1–3, 0 GPU-h, parallel with Phase 0)
-- [ ] Download Raptor labels, verify format and independence from gold
+- [ ] Download `stevenleehans/rsna-knee-llm-report-labels` (`llm_labels_v4_blend.csv`); verify format (StudyInstanceUID + 12 cols, [0,1]) and that the 58 gold rows are NOT verbatim 0/1 (verbatim copies poison cross-validation)
 - [ ] Build LLM blend (mean of hans_v4, pilkwang, sol56 where available)
-- [ ] Quantile-match Raptor to LLM distribution (exact function in §7)
-- [ ] Mix: 0.5 LLM + 0.5 Raptor (gold rows stay hard 0/1)
+- [ ] Quantile-match teacher table to LLM distribution (exact function in §7)
+- [ ] Mix: 0.5 LLM + 0.5 teacher (gold rows stay hard 0/1)
 - [ ] Platt scaling per finding on 58 gold (skip if <15 positives)
 - [ ] Start synovitis surrogate re-extraction via API (parallel)
 
@@ -187,7 +203,7 @@ def quantile_match(pred: np.ndarray, ref: np.ndarray) -> np.ndarray:
     return out
 
 # Mix:
-target = 0.5 * LLM_blend + 0.5 * quantile_match(Raptor, LLM_blend)
+target = 0.5 * LLM_blend + 0.5 * quantile_match(teacher_v4_blend, LLM_blend)
 ```
 
 ### 6.4 SWA (manual weight averaging)
@@ -231,7 +247,7 @@ def rank_mean(frames):
 
 **No flips** (medial ≠ lateral).
 
-### 6.7 Raptor Labels
+### 6.7 Teacher Labels (public)
 - Dataset: `rsna-knee-teacher-tables`
 - File: `raptor_teacher.csv`
 - Path: `/kaggle/input/rsna-knee-teacher-tables/raptor_teacher.csv`
@@ -241,7 +257,22 @@ def rank_mean(frames):
 
 ---
 
-## 7. Expected Outcomes
+## 7. Expected Outcomes (REVISED post-0.804 baseline)
+
+**Baseline: 0.804** (CoAtNet + 0.8473 labels). Gap to 0.964: 0.16.
+
+**Revised forecast with EfficientNet-B3 + 0.8927 teacher labels:**
+- Better labels (0.8473 → 0.8927): +0.03-0.05 → 0.834-0.854
+- EfficientNet-B3 @ 288px, 30 epochs + SWA (vs CoAtNet 8 epochs): +0.02-0.04 → 0.854-0.894
+- 3-member ensemble (2× EffNet-B3 + 1× ConvNeXt): +0.015-0.025 → 0.869-0.919
+- TTA: +0.003-0.006 → 0.872-0.925
+- 2nd-gen pseudo-labeling: +0.005-0.015 → 0.877-0.940
+
+**Realistic target: 0.88-0.92** (top 100-300)
+**Stretch target: 0.93-0.95** (top 50) — requires everything to hit upper estimates
+**First place (0.964):** Out of reach. The 0.804 baseline reveals a 0.16 gap that 90h cannot close.
+
+## 7a. Original Expected Outcomes (pre-baseline, for reference)
 
 | Step | Expected LB | Cumulative GPU-h |
 |---|---|---|
@@ -276,10 +307,10 @@ def rank_mean(frames):
 1. Architecture → ConvNeXt-Tiny (overruled by competition intel)
 2. Training strategy → 3-fold, rank-average, SWA, TTA
 3. Labels → U-SelfTrained, all-58-gold final, per-finding audit
-4. Competition intel → EfficientNet-B3 @ 288px, Raptor mix, 0.964 top
+4. Competition intel → EfficientNet-B3 @ 288px, public teacher-table mix, 0.964 top
 5. Unconventional → Pseudo-labeling, spatial re-extraction, skip SSL
 6. Label deep-dive → Report-to-image gap, Platt calibration (not isotonic)
-7. Red team → Killed isotonic, flagged Raptor dependency, budget risks
+7. Red team → Killed isotonic, flagged private-Raptor dependency (→ swapped to public table 2026-10-06), budget risks
 8. Implementation specs → Exact hyperparameters, code-ready functions
 
 ---
@@ -310,7 +341,7 @@ def rank_mean(frames):
 - [ ] `phase0runA`, `phase0runB`, `phase0runC` (preprocessed MRI shards)
 - [ ] `rsna-knee-phase1-weak-labels-v1` (weak_labels_v1.csv)
 - [ ] Competition data `rsna-knee-abnormality-detection` (train.csv, test/)
-- [ ] `rsna-knee-teacher-tables` (raptor_teacher.csv) — VERIFY ACCESSIBLE
+- [ ] `stevenleehans/rsna-knee-llm-report-labels` (llm_labels_v4_blend.csv) — public, verified 2026-10-06
 - [ ] Model checkpoints (stage2_best.pt as dataset for submission)
 
 **Notebook settings:**
