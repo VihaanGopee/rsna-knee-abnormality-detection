@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Phase 1 RE-LABEL via Gemini 3.8 Flash/Pro: generate a fresh, higher-quality
+"""Phase 1 RE-LABEL via Gemini 3.8 Flash: generate a fresh, higher-quality
 label set for all 4,276 reports to ensemble with (or replace) the teacher labels.
 
 Why: teacher labels hit 0.8927 vs gold. Our GPT-4.1 labels hit 0.8473.
-A Gemini 3.8/Pro label set gives us a third source to ensemble, potentially
+A Gemini 3.8 Flash label set gives us a third source to ensemble, potentially
 pushing past 0.8927.
 
 - Reads ./train.csv (4,276 unique reports)
@@ -15,7 +15,7 @@ pushing past 0.8927.
 Usage:
     export GEMINI_API_KEYS="key1,key2,key3"   # comma-separated, no spaces
     python3 phase1_gemini_relabel.py --csv ./train.csv --model gemini-3.8-flash
-    python3 phase1_gemini_relabel.py --csv ./train.csv --model gemini-3.8-pro
+    python3 phase1_gemini_relabel.py --csv ./train.csv --model gemini-3.8-flash-thinking
 
 ~4,276 reports. At ~40s/report (from v13 probe), this is ~47h single-threaded.
 Use multiple keys and run in background.
@@ -155,7 +155,7 @@ def gemini_chat(prompt, key, model):
     gen_config = {"maxOutputTokens": 2048}
     if "lite" not in model:
         gen_config["temperature"] = 0.0
-        # 3.8 Flash/Pro may not support thinkingBudget=0; try without first
+        # 3.8 Flash may not support thinkingBudget=0; try without first
         # (add only if needed)
     body = {
         "contents": [{"parts": [{"text": prompt}]}],
