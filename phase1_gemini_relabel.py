@@ -291,9 +291,9 @@ def main():
                     else:
                         labels[k] = 0.5  # abstain if parse failed
             except Exception as e:
-                print(f"  FAILED {uid}: {e}", flush=True)
+                print(f"  FAILED {uid}: {e} — will retry on next run", flush=True)
                 n_fail += 1
-                labels = {k: 0.5 for k in KEYS}
+                continue  # Don't mark as done; retry on next run
 
         rec = {"uid": uid, "labels": labels, "model": args.model}
         fout.write(json.dumps(rec) + "\n")
