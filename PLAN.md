@@ -248,12 +248,32 @@ def rank_mean(frames):
 **No flips** (medial ≠ lateral).
 
 ### 6.7 Teacher Labels (public)
+- **CORRECTION (2026-10-06):** The Raptor teacher table is private/dead. Actual table: public `stevenleehans/rsna-knee-llm-report-labels`, file `llm_labels_v4_blend.csv` (4,407 rows, StudyInstanceUID + 12 label columns [0,1], excludes 58 gold rows). Verified 0.8927 vs gold by two independent teams. Old entry below kept for reference.
 - Dataset: `rsna-knee-teacher-tables`
 - File: `raptor_teacher.csv`
 - Path: `/kaggle/input/rsna-knee-teacher-tables/raptor_teacher.csv`
 - Format: StudyInstanceUID + 12 label columns, [0,1]
 - Excludes 58 gold rows
 - **Verify accessibility before GPU spend**
+
+### 6.8 Severity-Grade Labels (2026-10-07, Justin's committed program)
+
+The 4 weakest teacher findings are all severity-graded (Synovitis 0.76, PF OA 0.83) — severity extraction is the competitive moat, not done publicly by any team. Decision path:
+- 12-finding all-in-one prompt probed at 0.8319 macro vs teacher 0.8927 → REJECTED (attention split: the same 4 severity findings dropped to 72-86%).
+- Focused 4-finding prompt (synovitis, pfoa, medial_oa, lateral_oa) hit **100% binary accuracy (58/58)** on the 58 gold studies. KEEP teacher labels for the 8 non-severity findings; grade only the 4 severity findings.
+
+Execution (his side): Justin pastes prompts into the Antigravity Gemini 3.8 Flash agent chat — one **new chat per batch**, 9 batches of ~500 rows. Naming: `graded_batch_N_M.json` = Python slice `rows[N:M]` (indices N through M-1, no overlap), e.g. batch 1 = `graded_batch_0_500.json` (rows 0–499, done 2026-10-07 ~19:34 PDT, 41 min; gold in-slice studies rows 29/63/109/445/470 matched 100%). ~6h total at this pace. Each file is a flat array of `{"StudyInstanceUID", "synovitis", "pfoa", "medial_oa", "lateral_oa"}`.
+
+Grading rules: not mentioned / normal / intact → "none"; "trace" / low-grade → "mild". Hoffa edema, superolateral fat pad edema, fat pad impingement, hoffitis → synovitis "mild". Synovitis moderate = moderate synovitis / chronic reactive synovitis / synovial hypertrophy with moderate effusion / lipoma arborescens; severe = PVNS / massive destructive synovitis. OA (pfoa, medial_oa, lateral_oa): mild = grade 1–2 / low-grade chondrosis / early osteophytosis / superficial fissuring; moderate = grade 3 / high-grade partial-thickness defect >50% / deep fissuring; severe = grade 4 / full-thickness cartilage denudation / bone-on-bone / eburnation.
+
+Merge (assistant side): `merge_severity_teacher.py` — tested, one command:
+```
+python3 merge_severity_teacher.py --teacher llm_labels_v4_blend.csv \
+    --batches 'graded_batch_*.json' --outdir ./severity_merge_v1
+```
+Semantics: the 4 severity findings become binary targets (none→0, mild/moderate/severe→1 — mapping validated at 100% on gold); the other 8 findings keep teacher values untouched, including 0.5 "not addressed" cells. The notebook's `2*|p-0.5|` confidence mask then assigns weight 1.0 to every replaced cell (script asserts this), so former ignored 0.5 cells become real supervision. Fails LOUD on: invalid grades, duplicate UIDs across batches, batch UIDs missing from the teacher table, batch-file count ≠ 9 (catches a forgotten batch or a stray probe JSON matching the glob; override with `--expect-batches N`). Outputs: `labels_v1_severity_merge.csv` (training drop-in, 13 cols, [0,1], zero NaNs), `severity_ordinal_v1.csv` (uid + 4 ordinal columns 0–3, -1 = ungraded, reserved for future severity-auxiliary-head run), `merge_report.json` (distributions, replaced-0.5 count, disagreement rate vs confident teacher cells).
+
+Next training run: upload `labels_v1_severity_merge.csv` to Kaggle as a new dataset, attach it, set `TEACHER_CSV_NAME = 'labels_v1_severity_merge.csv'` in `phase2-effnet-b3-v2.2` — no other notebook changes needed (gold override and 0.5-mask logic untouched). Note: the notebook's verbatim-gold warning may tick up — informational only, since severity binaries now match gold on graded studies.
 
 ---
 
@@ -360,6 +380,11 @@ def rank_mean(frames):
 |---|---|
 | `notebooks/phase2-train.ipynb` | Training (v12, single-GPU) |
 | `notebooks/phase2-submit.ipynb` | Inference/submission (v1) |
+| `notebooks/phase2-effnet-b3-v2.2` | EfficientNet-B3 training (canonical, fp32 loss, no DP) |
+| `merge_severity_teacher.py` | Merge 9 severity batch JSONs into teacher table (binary severity targets) |
+| `severity_batch_verify.py` | Quality-check a graded batch JSON vs the 58 gold studies |
+| `validate_severity.py` | Validate the focused 4-finding severity prompt vs gold |
+| `phase1_severity_antigravity.py` | Antigravity-style severity grading script (assistant-side) |
 | `platt_calibration.py` | Per-finding bias correction |
 | `PLAN.md` | This document |
 | `phase1_*.py` | Phase 1 label extraction (archived) |
