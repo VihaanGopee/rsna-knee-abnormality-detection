@@ -1,0 +1,3502 @@
+[
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.75926011938952404257302292495731660728",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.75976388060969166980873144500539735332",
+    "synovitis": "none",
+    "pfoa": "mild",
+    "medial_oa": "mild",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.75980374267002793040832157122311396174",
+    "synovitis": "moderate",
+    "pfoa": "moderate",
+    "medial_oa": "severe",
+    "lateral_oa": "severe"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.76012896432318288623173593280895772876",
+    "synovitis": "mild",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.76027799502777251766328820405966979386",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.76065434429437758192282562351089010088",
+    "synovitis": "none",
+    "pfoa": "severe",
+    "medial_oa": "severe",
+    "lateral_oa": "mild"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.76093766204928582819565636658977147523",
+    "synovitis": "mild",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.76107330932071966465869847071480517541",
+    "synovitis": "none",
+    "pfoa": "severe",
+    "medial_oa": "mild",
+    "lateral_oa": "mild"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.76122127303562588545128053661609574837",
+    "synovitis": "none",
+    "pfoa": "mild",
+    "medial_oa": "none",
+    "lateral_oa": "mild"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.76125027090596913549224250979076533606",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.76167153566894354739332364376483514559",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "mild"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.76190704217737835083438638928129775625",
+    "synovitis": "none",
+    "pfoa": "mild",
+    "medial_oa": "mild",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.76222770668660274805993655800271653712",
+    "synovitis": "mild",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.76242245340157474968574926079920787199",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.76281930374588438789344170829280438697",
+    "synovitis": "none",
+    "pfoa": "mild",
+    "medial_oa": "mild",
+    "lateral_oa": "mild"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.76344826994380951498651448092980303697",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.76350662767360412185091180512006419379",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.76514087677277144682713362609812138150",
+    "synovitis": "moderate",
+    "pfoa": "severe",
+    "medial_oa": "severe",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.76514504104121634569792846980451896030",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.76525107909962775502207829870873494024",
+    "synovitis": "none",
+    "pfoa": "moderate",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.76538737802277241976971950690663079376",
+    "synovitis": "mild",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.76543241221133987658552440969465372120",
+    "synovitis": "moderate",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.76545468257774231281618306952011717992",
+    "synovitis": "mild",
+    "pfoa": "none",
+    "medial_oa": "mild",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.76620177268652814425535081607587091903",
+    "synovitis": "none",
+    "pfoa": "severe",
+    "medial_oa": "severe",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.76651080491383110752977286124044311636",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.76662146598924492573212477881527658730",
+    "synovitis": "moderate",
+    "pfoa": "moderate",
+    "medial_oa": "severe",
+    "lateral_oa": "severe"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.76680092665218514711300086707222109323",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.76742750470853901575934097885382242952",
+    "synovitis": "none",
+    "pfoa": "severe",
+    "medial_oa": "severe",
+    "lateral_oa": "severe"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.76757251008849492985513280752011229119",
+    "synovitis": "none",
+    "pfoa": "severe",
+    "medial_oa": "moderate",
+    "lateral_oa": "moderate"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.76772148369531098768751348676329945789",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.76841077743272729415666709641073096909",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.76862911430418639277808760660745763387",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.76903562636417038907113894538863784737",
+    "synovitis": "mild",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.76909970028125318280995002129970165723",
+    "synovitis": "mild",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.76914908131203373740345988718674850939",
+    "synovitis": "mild",
+    "pfoa": "moderate",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.76950154099427419631807259601983648254",
+    "synovitis": "none",
+    "pfoa": "severe",
+    "medial_oa": "severe",
+    "lateral_oa": "moderate"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.76993922254007307143291254174266755701",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "moderate",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.77018355356797290743788712046815540223",
+    "synovitis": "none",
+    "pfoa": "mild",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.77037121474756969001683126693104350509",
+    "synovitis": "mild",
+    "pfoa": "moderate",
+    "medial_oa": "none",
+    "lateral_oa": "mild"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.77058587552329832558354544874120592826",
+    "synovitis": "none",
+    "pfoa": "severe",
+    "medial_oa": "severe",
+    "lateral_oa": "severe"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.77060858802024387619459645469871885412",
+    "synovitis": "mild",
+    "pfoa": "mild",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.77061877382110597010150770981465581536",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "mild",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.77150650601457686196626648868552167695",
+    "synovitis": "none",
+    "pfoa": "severe",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.77155817997584903787597001328868124855",
+    "synovitis": "none",
+    "pfoa": "mild",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.77164129615096222757740198026718214733",
+    "synovitis": "mild",
+    "pfoa": "mild",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.77183368292104509335580564463404842046",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "mild",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.77215476384973989055525592556183934827",
+    "synovitis": "none",
+    "pfoa": "severe",
+    "medial_oa": "severe",
+    "lateral_oa": "severe"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.77244685031928454051409193776790348219",
+    "synovitis": "none",
+    "pfoa": "severe",
+    "medial_oa": "moderate",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.77261014467268552758826551926128217025",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.77274115607096351160296319533007121044",
+    "synovitis": "mild",
+    "pfoa": "mild",
+    "medial_oa": "mild",
+    "lateral_oa": "mild"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.77283213969268676660453937180363826917",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.77283634197289382453511269950488893300",
+    "synovitis": "mild",
+    "pfoa": "severe",
+    "medial_oa": "none",
+    "lateral_oa": "severe"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.77290477043075828139630734968573461136",
+    "synovitis": "none",
+    "pfoa": "severe",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.77299727102400166279263320763707637485",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.77306755058630855443644908572157134062",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.77319661699409997424800377883567027839",
+    "synovitis": "none",
+    "pfoa": "moderate",
+    "medial_oa": "severe",
+    "lateral_oa": "moderate"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.77362718298550276679350855963451855003",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.77370119801633353780677378448761665685",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.77378803863827312829317008636359414012",
+    "synovitis": "none",
+    "pfoa": "mild",
+    "medial_oa": "mild",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.77391801789875882109036004511558148658",
+    "synovitis": "severe",
+    "pfoa": "severe",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.77416382267531567401698555072875486512",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.77421709644087006134426085284321515809",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "moderate",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.77433065090757862487482575794398458402",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "mild",
+    "lateral_oa": "mild"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.77442647074650043391818472068835112806",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.77498121906981512168120474112422492971",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.77508762938574470575737016745357126587",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.77513348456432770689938407624768928320",
+    "synovitis": "none",
+    "pfoa": "mild",
+    "medial_oa": "moderate",
+    "lateral_oa": "mild"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.77524507552350448792970399203131998592",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.77541648519018799027301684184453151471",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.77546769004367585830455474984769277713",
+    "synovitis": "none",
+    "pfoa": "mild",
+    "medial_oa": "mild",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.77577135626047243581253857225991426727",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "mild",
+    "lateral_oa": "mild"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.77584925163022886785284486387921312146",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.77593859518024366170735307975173961777",
+    "synovitis": "moderate",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.77611073647079414772859496272387571059",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.77626578713099735143745396709359607445",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.77628479664122209492622263818114972176",
+    "synovitis": "none",
+    "pfoa": "mild",
+    "medial_oa": "none",
+    "lateral_oa": "mild"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.77716260980321491689913730053309892120",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.77735690782343511872544703464260892488",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.77740672313593763051900703940745812581",
+    "synovitis": "moderate",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.77753753872601674668756777373761660873",
+    "synovitis": "none",
+    "pfoa": "moderate",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.77760453966349959552328150395676117417",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "mild"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.77800740811302686332282410929816056283",
+    "synovitis": "none",
+    "pfoa": "mild",
+    "medial_oa": "none",
+    "lateral_oa": "severe"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.77801860555102174958520570751272642387",
+    "synovitis": "none",
+    "pfoa": "moderate",
+    "medial_oa": "moderate",
+    "lateral_oa": "severe"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.77823946901144772346251781172043480398",
+    "synovitis": "mild",
+    "pfoa": "moderate",
+    "medial_oa": "mild",
+    "lateral_oa": "mild"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.77843765997593346714211135369376676497",
+    "synovitis": "mild",
+    "pfoa": "moderate",
+    "medial_oa": "none",
+    "lateral_oa": "mild"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.77889800516853576877948593628420228178",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.77893704208186903913532950495036889026",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.77911973519830915742655727368286737079",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.77933128806366660573360274958258917742",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.78003548255041391467292087330671945247",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.78012314847102407375138809615977711653",
+    "synovitis": "none",
+    "pfoa": "mild",
+    "medial_oa": "mild",
+    "lateral_oa": "mild"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.78072765790191594685273447833272737429",
+    "synovitis": "none",
+    "pfoa": "mild",
+    "medial_oa": "mild",
+    "lateral_oa": "mild"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.78079900750417018394321006978343945239",
+    "synovitis": "none",
+    "pfoa": "moderate",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.78083057157844664959843364584162587026",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.78084594560404633421210837175859618437",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "mild",
+    "lateral_oa": "mild"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.78119223228067919465880137763593966456",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "mild"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.78188863861812651079751164964756388411",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.78198993378521219839327914679211902952",
+    "synovitis": "none",
+    "pfoa": "moderate",
+    "medial_oa": "mild",
+    "lateral_oa": "mild"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.78236036694398253902871510456985685293",
+    "synovitis": "mild",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.78238394512811614973689011297363399053",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.78282552802075313852355443512555224586",
+    "synovitis": "mild",
+    "pfoa": "severe",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.78286395605671977872377352305890466464",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "mild",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.78296478954955171036523274995555716268",
+    "synovitis": "mild",
+    "pfoa": "none",
+    "medial_oa": "severe",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.78420763928408680447797586163977368190",
+    "synovitis": "none",
+    "pfoa": "moderate",
+    "medial_oa": "mild",
+    "lateral_oa": "mild"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.78465765647012043478539489340002371960",
+    "synovitis": "mild",
+    "pfoa": "moderate",
+    "medial_oa": "none",
+    "lateral_oa": "mild"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.78475145549489837635803968565380247517",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.78476873086705419136436170130940915568",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.78512215519177850923279235346968676828",
+    "synovitis": "none",
+    "pfoa": "severe",
+    "medial_oa": "mild",
+    "lateral_oa": "mild"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.78521396404736679127326025240279747196",
+    "synovitis": "mild",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.78574437345603052437892513165832297960",
+    "synovitis": "none",
+    "pfoa": "mild",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.78646473961447523033955716877524794707",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.78657055734742806687703707756153505756",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.78667999747216717251638754803697959701",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.78674598286586525734293563394409166190",
+    "synovitis": "none",
+    "pfoa": "mild",
+    "medial_oa": "mild",
+    "lateral_oa": "mild"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.78685661415919658264222803849222055515",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "mild"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.78757011872917563830995996191850541453",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.78765525474890094481249498938657540052",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "mild",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.78800983923143929298359366572020370031",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.78808320605816811006382053060951793555",
+    "synovitis": "mild",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.78812661021494224637586904573732040856",
+    "synovitis": "none",
+    "pfoa": "mild",
+    "medial_oa": "mild",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.78853931928960361455025737444267199231",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.78968420394708302953391711477016139949",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "mild",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.78972123731732056524948076388825106061",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.79021499290691125513421477204330532755",
+    "synovitis": "none",
+    "pfoa": "mild",
+    "medial_oa": "mild",
+    "lateral_oa": "mild"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.79038153803632889185429988483097161887",
+    "synovitis": "none",
+    "pfoa": "mild",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.79077219037094025366585138112899760966",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "mild",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.79080521163097116147379189510104170611",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.79087227780630716132147615846840128474",
+    "synovitis": "mild",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.79117047831806895544174734229992359986",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.79122189963582241618519333445055548347",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.79165531588966776246377098630025444815",
+    "synovitis": "moderate",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.79224785668205420138951103045759609475",
+    "synovitis": "mild",
+    "pfoa": "mild",
+    "medial_oa": "moderate",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.79225094031423353857449795712402404317",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "mild",
+    "lateral_oa": "mild"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.79245771997885598399203314109623928718",
+    "synovitis": "moderate",
+    "pfoa": "mild",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.79247871688929479411597859576284194165",
+    "synovitis": "none",
+    "pfoa": "mild",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.79258497507223824227830886693749460348",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.79267465462008228906382361587050826784",
+    "synovitis": "none",
+    "pfoa": "mild",
+    "medial_oa": "mild",
+    "lateral_oa": "moderate"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.79274948549030940175536603063980168192",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.79290157182784080975822485697879660942",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.79292862882980756453890778996691993351",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "mild",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.79326627674334637493320764205397279674",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.79341955397030543255969676347554165142",
+    "synovitis": "none",
+    "pfoa": "mild",
+    "medial_oa": "mild",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.79505118958475739396320647697583979079",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.79524312100988116256514335064057385347",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.79551456190098389081551755482042135791",
+    "synovitis": "mild",
+    "pfoa": "mild",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.79560170727391465844958390474997798803",
+    "synovitis": "none",
+    "pfoa": "severe",
+    "medial_oa": "severe",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.79565393323323007178523850093527250842",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.79582457162604674356422857305405255763",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.79609204436595306110253502961172135807",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.79636443202100988025435536780567446582",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "mild",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.79648517065511897282938523065537768426",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "mild",
+    "lateral_oa": "mild"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.79672421957132993896448375311641998688",
+    "synovitis": "none",
+    "pfoa": "mild",
+    "medial_oa": "mild",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.79725520325008084984331823107016254775",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.79741629769872115526056483024289600492",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.79798779812052605703861699094268016306",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.79829033430619597320769579608450393290",
+    "synovitis": "none",
+    "pfoa": "severe",
+    "medial_oa": "severe",
+    "lateral_oa": "moderate"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.79977436705480715175480363175316375576",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.79991838737793096019496013540529642900",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.80058869639900582578987760750483296668",
+    "synovitis": "none",
+    "pfoa": "severe",
+    "medial_oa": "severe",
+    "lateral_oa": "severe"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.80100785345864355815698147663964005920",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.80146250663015309456767479960653638934",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "severe",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.80161127293548940216292842707683784128",
+    "synovitis": "moderate",
+    "pfoa": "mild",
+    "medial_oa": "mild",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.80180578697901833764761405542790185180",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "mild",
+    "lateral_oa": "mild"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.80192355832283305029770183988436644845",
+    "synovitis": "none",
+    "pfoa": "severe",
+    "medial_oa": "severe",
+    "lateral_oa": "severe"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.80207056225476761432712249807198836187",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "mild",
+    "lateral_oa": "mild"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.80247974926646352443043954025450139721",
+    "synovitis": "none",
+    "pfoa": "mild",
+    "medial_oa": "mild",
+    "lateral_oa": "mild"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.80275294885165896124489476449616436102",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.80284846390295834578273590480193235798",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.80290749690597272632725356393056746299",
+    "synovitis": "none",
+    "pfoa": "mild",
+    "medial_oa": "mild",
+    "lateral_oa": "mild"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.80292580287849976694993628109721422478",
+    "synovitis": "mild",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.80312559977515578735238310472949287111",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.80313580693550912024103221258669390487",
+    "synovitis": "mild",
+    "pfoa": "moderate",
+    "medial_oa": "moderate",
+    "lateral_oa": "severe"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.80319546205646617603546887163539306146",
+    "synovitis": "none",
+    "pfoa": "severe",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.80325205657974094483016625702390834774",
+    "synovitis": "mild",
+    "pfoa": "mild",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.80391378873630377472192017862302619947",
+    "synovitis": "none",
+    "pfoa": "mild",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.80433141990021472112645841723991584182",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.80458507774711142534182397228254444268",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.80492324225032367918842505447056622561",
+    "synovitis": "none",
+    "pfoa": "severe",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.80514754572353458107286859773300865138",
+    "synovitis": "mild",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.80556515221794602430701573588498144286",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "mild"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.80557835452734362083552169469427388003",
+    "synovitis": "none",
+    "pfoa": "severe",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.80589796918823112368758999678369292754",
+    "synovitis": "mild",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "severe"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.80612964209397056653334784776523875647",
+    "synovitis": "none",
+    "pfoa": "mild",
+    "medial_oa": "mild",
+    "lateral_oa": "severe"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.80627605463642274852766102874822833365",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.80629565747112614845746475820152813307",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.80642348849062865125509773837278900750",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.80643480554795312280333659144941545925",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.80651977424179089141346174053751183506",
+    "synovitis": "none",
+    "pfoa": "severe",
+    "medial_oa": "severe",
+    "lateral_oa": "severe"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.80661392139668653552110941896475066204",
+    "synovitis": "mild",
+    "pfoa": "mild",
+    "medial_oa": "none",
+    "lateral_oa": "mild"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.80671597537348112977780954910198682272",
+    "synovitis": "mild",
+    "pfoa": "mild",
+    "medial_oa": "mild",
+    "lateral_oa": "mild"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.80698510014594772882040509716764819716",
+    "synovitis": "none",
+    "pfoa": "severe",
+    "medial_oa": "moderate",
+    "lateral_oa": "moderate"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.80726797831040227285328789648680519664",
+    "synovitis": "none",
+    "pfoa": "severe",
+    "medial_oa": "mild",
+    "lateral_oa": "mild"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.80735285867775404153100236162962472952",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "mild",
+    "lateral_oa": "mild"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.80741358365199721720335324482078866565",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.80758336123908522542787716219939751704",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.80851365368114686105558347899990395309",
+    "synovitis": "moderate",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.80861108320341696163987804408524915999",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.80876235930771882271600826613593202364",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.80878057166752747059190481131529937715",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "moderate",
+    "lateral_oa": "moderate"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.80886525412417948114478368374120704834",
+    "synovitis": "mild",
+    "pfoa": "mild",
+    "medial_oa": "mild",
+    "lateral_oa": "mild"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.80931292574057303692838531323879513417",
+    "synovitis": "none",
+    "pfoa": "severe",
+    "medial_oa": "severe",
+    "lateral_oa": "mild"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.81012548926053584036386949658594985125",
+    "synovitis": "none",
+    "pfoa": "mild",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.81018911907787774214591206085583545057",
+    "synovitis": "mild",
+    "pfoa": "moderate",
+    "medial_oa": "moderate",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.81024897463656728358703040759074583549",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.81031057654953109295788159826841315360",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "severe",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.81096597169632636454986988944050298701",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.81103809943451790668501089584752866199",
+    "synovitis": "none",
+    "pfoa": "mild",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.81109405367395078564887780335570099673",
+    "synovitis": "none",
+    "pfoa": "mild",
+    "medial_oa": "mild",
+    "lateral_oa": "mild"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.81142440700884513521007992957945568924",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.81248820934296461385324385812581970340",
+    "synovitis": "mild",
+    "pfoa": "mild",
+    "medial_oa": "mild",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.81269884425000228604280521306949721859",
+    "synovitis": "none",
+    "pfoa": "mild",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.81327951282145199298572980264557740321",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "mild"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.81342416992724702402763591633702802359",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "mild",
+    "lateral_oa": "mild"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.81347841116019279082226143308588516787",
+    "synovitis": "none",
+    "pfoa": "mild",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.81351574724227319632426427855692606694",
+    "synovitis": "none",
+    "pfoa": "mild",
+    "medial_oa": "none",
+    "lateral_oa": "moderate"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.81407504276375197122586620633759174421",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "severe",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.81462603621780919719466264356289554669",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.81464322239381998685473520085495957135",
+    "synovitis": "none",
+    "pfoa": "mild",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.81466575994184158172641823163654418018",
+    "synovitis": "mild",
+    "pfoa": "mild",
+    "medial_oa": "mild",
+    "lateral_oa": "mild"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.81475058647553697318837239968139077272",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.81495303185504163367736663647489556517",
+    "synovitis": "mild",
+    "pfoa": "none",
+    "medial_oa": "severe",
+    "lateral_oa": "mild"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.81540134120507822899514611863725372563",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.81567030584250750745410094870790052181",
+    "synovitis": "mild",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.81590494282169434250974061642267472166",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.81629704995225424568187579791704967233",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.81631925197682464058124413934958934086",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.81651132686162360431299931833372141617",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.81651455914141365028015556083080638757",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.81692996137620934043276253858381812472",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "mild",
+    "lateral_oa": "mild"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.81698411330214788362326470979160431674",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.81738571920712657790861120957086010772",
+    "synovitis": "mild",
+    "pfoa": "mild",
+    "medial_oa": "moderate",
+    "lateral_oa": "mild"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.81740348974208459068937862799489495782",
+    "synovitis": "none",
+    "pfoa": "mild",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.81790990482142045640192729399175106255",
+    "synovitis": "none",
+    "pfoa": "moderate",
+    "medial_oa": "moderate",
+    "lateral_oa": "mild"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.81793454171031578492222004629265937656",
+    "synovitis": "none",
+    "pfoa": "severe",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.81796385087779065457668769443782458844",
+    "synovitis": "none",
+    "pfoa": "mild",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.81797437102217585216278133168092577952",
+    "synovitis": "none",
+    "pfoa": "mild",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.81819209302731920404237374320026807282",
+    "synovitis": "none",
+    "pfoa": "severe",
+    "medial_oa": "mild",
+    "lateral_oa": "mild"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.81822709772232914298414700148454511661",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.81832287065207835637503039077685315236",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.81892104897856100357169774214718573167",
+    "synovitis": "none",
+    "pfoa": "mild",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.81927409938015158663782061022054347955",
+    "synovitis": "none",
+    "pfoa": "mild",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.81957447654112577010261210572986132211",
+    "synovitis": "moderate",
+    "pfoa": "severe",
+    "medial_oa": "severe",
+    "lateral_oa": "moderate"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.81964000393640770822199916465038759069",
+    "synovitis": "none",
+    "pfoa": "moderate",
+    "medial_oa": "mild",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.81974732979506931694079719601760393277",
+    "synovitis": "none",
+    "pfoa": "mild",
+    "medial_oa": "mild",
+    "lateral_oa": "mild"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.81981151447274200345866874172324295172",
+    "synovitis": "none",
+    "pfoa": "moderate",
+    "medial_oa": "moderate",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.81984200870681776955493738987078746894",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.82012532783011843175172575198326783678",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.82053853036886620816821481139413594407",
+    "synovitis": "none",
+    "pfoa": "mild",
+    "medial_oa": "mild",
+    "lateral_oa": "mild"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.82074883987134049971242727164506046476",
+    "synovitis": "mild",
+    "pfoa": "severe",
+    "medial_oa": "severe",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.82143276307898132314496735515204481508",
+    "synovitis": "none",
+    "pfoa": "severe",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.82144602300666174450721045102799681426",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.82157293611630605740641187215639204974",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "mild",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.82166943552764439138333504456139890254",
+    "synovitis": "none",
+    "pfoa": "mild",
+    "medial_oa": "severe",
+    "lateral_oa": "severe"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.82169173362972793731001247413129649263",
+    "synovitis": "none",
+    "pfoa": "severe",
+    "medial_oa": "moderate",
+    "lateral_oa": "moderate"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.82272793832748838882752586678639564181",
+    "synovitis": "none",
+    "pfoa": "mild",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.82355456395534835058857499033494900716",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.82414828460683289235183375457850096746",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.82440268452598207215458064865523988222",
+    "synovitis": "none",
+    "pfoa": "mild",
+    "medial_oa": "none",
+    "lateral_oa": "severe"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.82447100001417065190678617013741085481",
+    "synovitis": "mild",
+    "pfoa": "mild",
+    "medial_oa": "mild",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.82481056562260046738834822905709207128",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.82498616123349854719801627024073383874",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.82523073559792523830827952754346276051",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.82548251499640077572026404183402934330",
+    "synovitis": "none",
+    "pfoa": "severe",
+    "medial_oa": "mild",
+    "lateral_oa": "mild"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.82548952153746644951736669119607083230",
+    "synovitis": "none",
+    "pfoa": "mild",
+    "medial_oa": "severe",
+    "lateral_oa": "mild"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.82579118531566493365068788437906656162",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.82582558624896662901163827145277490232",
+    "synovitis": "none",
+    "pfoa": "moderate",
+    "medial_oa": "severe",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.82587763533601760002619014353812074700",
+    "synovitis": "none",
+    "pfoa": "mild",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.82591599611540849522609405219902904134",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.82655005222804459605894403147145992714",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.82731606763525898032678680051515732914",
+    "synovitis": "none",
+    "pfoa": "mild",
+    "medial_oa": "mild",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.82744514729782879778828512295184306538",
+    "synovitis": "none",
+    "pfoa": "mild",
+    "medial_oa": "moderate",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.82757616216788919181323176147396770758",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.82858981777405241601610241542173548956",
+    "synovitis": "none",
+    "pfoa": "mild",
+    "medial_oa": "mild",
+    "lateral_oa": "mild"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.82902769135373284012762237744774967400",
+    "synovitis": "mild",
+    "pfoa": "severe",
+    "medial_oa": "severe",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.82925474533853765570570726554869886925",
+    "synovitis": "none",
+    "pfoa": "mild",
+    "medial_oa": "mild",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.82967086493280898295669930903240677729",
+    "synovitis": "mild",
+    "pfoa": "mild",
+    "medial_oa": "mild",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.83000639623679673469640458882929412717",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.83028939839767027342482365275441078777",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.83030371526667747898709613600825477966",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.83054899303871276184985881638619543362",
+    "synovitis": "none",
+    "pfoa": "severe",
+    "medial_oa": "severe",
+    "lateral_oa": "severe"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.83055401642066749019091368358783700783",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.83061811791652434833797599835671351097",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.83108474538388106770920972885900596508",
+    "synovitis": "none",
+    "pfoa": "moderate",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.83121378128521985713113311344685112825",
+    "synovitis": "none",
+    "pfoa": "mild",
+    "medial_oa": "mild",
+    "lateral_oa": "mild"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.83152040259754415849193046299744699239",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.83220896521302064187926748035734200732",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.83235374118671754689663732057314083332",
+    "synovitis": "none",
+    "pfoa": "mild",
+    "medial_oa": "mild",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.83237706274929081175032033288272528919",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.83253778356746892201320443660102495790",
+    "synovitis": "mild",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.83271280040777227673434567660749430744",
+    "synovitis": "none",
+    "pfoa": "mild",
+    "medial_oa": "none",
+    "lateral_oa": "mild"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.83376388091077619281568190257019735638",
+    "synovitis": "none",
+    "pfoa": "mild",
+    "medial_oa": "moderate",
+    "lateral_oa": "mild"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.83384018761005700404957421316476952190",
+    "synovitis": "none",
+    "pfoa": "severe",
+    "medial_oa": "moderate",
+    "lateral_oa": "mild"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.83456649088980869429062498344457162631",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.83465081013175989426506371406463660936",
+    "synovitis": "moderate",
+    "pfoa": "severe",
+    "medial_oa": "mild",
+    "lateral_oa": "severe"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.83495448827553002152296206085110883602",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.83509478059288902959149676250911654986",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.83569065014916050100714967945484998462",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.83602205818477323486169938182117122488",
+    "synovitis": "none",
+    "pfoa": "moderate",
+    "medial_oa": "moderate",
+    "lateral_oa": "mild"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.83691358175810149975084604975065122220",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "mild",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.83740112248863750162633901687556705057",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.83747418172021065605877274971789603771",
+    "synovitis": "none",
+    "pfoa": "mild",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.83847285247209768917850605454140194088",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.83956129905762530953192730040209719910",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.84007436672323587547274248257117331532",
+    "synovitis": "none",
+    "pfoa": "mild",
+    "medial_oa": "mild",
+    "lateral_oa": "mild"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.84047134932018909998648460546980598926",
+    "synovitis": "none",
+    "pfoa": "severe",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.84059077072076289248966490696872414783",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.84062602050757262792437893691591415560",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.84062980592611347665739105270731842220",
+    "synovitis": "none",
+    "pfoa": "moderate",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.84069767112794890061709127671908414399",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.84123495463663584148839831457665741488",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.84230432137191939390680841389370206819",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "mild",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.84238814030979264404768702945290704724",
+    "synovitis": "mild",
+    "pfoa": "mild",
+    "medial_oa": "mild",
+    "lateral_oa": "mild"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.84292569246911697141902796190329671261",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "mild",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.84347051904829814300575579670995018991",
+    "synovitis": "none",
+    "pfoa": "mild",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.84419297518873367123595080276985526259",
+    "synovitis": "mild",
+    "pfoa": "severe",
+    "medial_oa": "mild",
+    "lateral_oa": "mild"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.84477198486144701928775090913243250655",
+    "synovitis": "none",
+    "pfoa": "mild",
+    "medial_oa": "mild",
+    "lateral_oa": "mild"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.84483080389344581106129884869678629612",
+    "synovitis": "mild",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.84486787871353595019134028899317143475",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.84612593835203397696029057940345763682",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.84630493975910180537831353884518764364",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "mild",
+    "lateral_oa": "mild"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.84646554968523210021448483220679710652",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.84661341697154104963062177064495044195",
+    "synovitis": "mild",
+    "pfoa": "severe",
+    "medial_oa": "none",
+    "lateral_oa": "severe"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.84709539128629951937294117586370340042",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.84720476187201404764508451536959273676",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.84748479740284893375192048321707057482",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.84827027113422423894439539536275453132",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.84855341377363129926967387137216814518",
+    "synovitis": "none",
+    "pfoa": "mild",
+    "medial_oa": "mild",
+    "lateral_oa": "mild"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.84857368518703570476541203284655412396",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.84896756080952941537556818257863912066",
+    "synovitis": "none",
+    "pfoa": "mild",
+    "medial_oa": "mild",
+    "lateral_oa": "mild"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.84982310626395569925821771375535259394",
+    "synovitis": "mild",
+    "pfoa": "severe",
+    "medial_oa": "mild",
+    "lateral_oa": "severe"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.85004373913191467860228868467924401547",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.85031127696558971105465423134104223548",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.85036616529391787087213173897728060798",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.85095389649021071892478435298763928925",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.85108719393967663738580518985514195538",
+    "synovitis": "none",
+    "pfoa": "mild",
+    "medial_oa": "mild",
+    "lateral_oa": "mild"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.85137704768728261642637391657270006448",
+    "synovitis": "none",
+    "pfoa": "mild",
+    "medial_oa": "mild",
+    "lateral_oa": "mild"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.85194002080793317087210934629814349622",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.85212353344613461454490252928274988058",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.85294435004325211584698794441083866921",
+    "synovitis": "mild",
+    "pfoa": "severe",
+    "medial_oa": "severe",
+    "lateral_oa": "mild"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.85326542895076582985200613540648336047",
+    "synovitis": "mild",
+    "pfoa": "mild",
+    "medial_oa": "none",
+    "lateral_oa": "mild"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.85333821516157983299252782678788406019",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.85341019006931436802294963713199308935",
+    "synovitis": "none",
+    "pfoa": "severe",
+    "medial_oa": "severe",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.85347263026430684291021533170619978114",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.85391052076760686301971262244561025345",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.85397267100597758920280635204297906286",
+    "synovitis": "none",
+    "pfoa": "mild",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.85416107585703628549041626609272707431",
+    "synovitis": "moderate",
+    "pfoa": "mild",
+    "medial_oa": "severe",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.85431902914673414035492907270636012892",
+    "synovitis": "none",
+    "pfoa": "moderate",
+    "medial_oa": "severe",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.85454884397223412543050876117416146750",
+    "synovitis": "none",
+    "pfoa": "mild",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.85464150757448712711832350617010924327",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.85475892602877115812059264719695919613",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.85499036441349866810703945289793057098",
+    "synovitis": "none",
+    "pfoa": "severe",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.85545102350084131396266710667808696561",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.85566900782101872452970957532250214590",
+    "synovitis": "moderate",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.85602291032341007550376696695283794665",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.85624441072689653093363046226467141762",
+    "synovitis": "none",
+    "pfoa": "severe",
+    "medial_oa": "mild",
+    "lateral_oa": "mild"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.85646781189339988389190891868001374533",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.85649172620970194090967653766415467836",
+    "synovitis": "mild",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.85663162480758065951465617999516770647",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.85687351346612079711706269264454944647",
+    "synovitis": "none",
+    "pfoa": "mild",
+    "medial_oa": "mild",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.85715956158218184426400151797364834203",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.85719235937472088594405415004352845221",
+    "synovitis": "none",
+    "pfoa": "mild",
+    "medial_oa": "none",
+    "lateral_oa": "mild"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.85728170022176096748897349447671687164",
+    "synovitis": "moderate",
+    "pfoa": "severe",
+    "medial_oa": "mild",
+    "lateral_oa": "severe"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.85735729179216019275685564112535593988",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.85748882309364598407865143890978767674",
+    "synovitis": "none",
+    "pfoa": "mild",
+    "medial_oa": "mild",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.85760360279564672425828346507309104394",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.85849908712977285006159496192673293501",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.85870577082315172424837183881210532800",
+    "synovitis": "mild",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.85879572979834912642178551098379145607",
+    "synovitis": "none",
+    "pfoa": "mild",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.85882078780717905717989373451578844863",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.85883562680953255833567595509408888410",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.85890890545815190189345870912381925290",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.85932495800565018166769303205378781707",
+    "synovitis": "none",
+    "pfoa": "mild",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.85943737587102032370951456635167782343",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "mild",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.85970222049966384156120176704985355996",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.85976668143927055109184433855426232055",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.85992037603186775437749979929724514304",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.85992651772359515416050249463715355943",
+    "synovitis": "none",
+    "pfoa": "mild",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.86020966816754359840982061252012700091",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.86029947807373604003071651721618330827",
+    "synovitis": "mild",
+    "pfoa": "severe",
+    "medial_oa": "mild",
+    "lateral_oa": "mild"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.86042942187650835661744645315369706668",
+    "synovitis": "none",
+    "pfoa": "severe",
+    "medial_oa": "severe",
+    "lateral_oa": "severe"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.86067849233330188988240710585112183308",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.86082522186055358984181640226529351801",
+    "synovitis": "mild",
+    "pfoa": "mild",
+    "medial_oa": "severe",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.86117639434986594266345773277419881144",
+    "synovitis": "none",
+    "pfoa": "mild",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.86142930956005716169649168306759482915",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "severe",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.86216155858324761845740646421500394797",
+    "synovitis": "mild",
+    "pfoa": "severe",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.86239793008693746155478763153154040128",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.86251314013737658351649446042801810374",
+    "synovitis": "mild",
+    "pfoa": "severe",
+    "medial_oa": "moderate",
+    "lateral_oa": "mild"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.86263264208309369957750915520115390972",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.86273853115722509980053190345047859057",
+    "synovitis": "none",
+    "pfoa": "severe",
+    "medial_oa": "severe",
+    "lateral_oa": "severe"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.86280033511814602594654628677479528508",
+    "synovitis": "none",
+    "pfoa": "severe",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.86285715293767810771609523819042157072",
+    "synovitis": "none",
+    "pfoa": "severe",
+    "medial_oa": "moderate",
+    "lateral_oa": "severe"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.86315835011470465506843590014408831373",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.86332035495941070455209594003499488889",
+    "synovitis": "none",
+    "pfoa": "severe",
+    "medial_oa": "severe",
+    "lateral_oa": "severe"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.86341139705884690862568425859303870601",
+    "synovitis": "mild",
+    "pfoa": "none",
+    "medial_oa": "mild",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.86351141114604781108401133410934252655",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "severe"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.86405969333062807387894608315897106350",
+    "synovitis": "mild",
+    "pfoa": "mild",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.86409878732405036646840908998274047391",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.86416984885007871128151024515780322767",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.86422343639522250286002195622435564347",
+    "synovitis": "mild",
+    "pfoa": "none",
+    "medial_oa": "mild",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.86435271359723045834079326733478538148",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.86435890312227285216810145658548164773",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.86516555757334047240474191101770683543",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.86532643576908316499388520854820002133",
+    "synovitis": "none",
+    "pfoa": "mild",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.86566584776908143877603164704838586097",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.86583531066383395270546012510184348251",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.86625876521226465945114246972542881955",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.86651345701812229172985086531423369421",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.86715997235054599024919893656486735623",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.86733565200815744326667230375642936291",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.86876540394528304678398111135600894869",
+    "synovitis": "none",
+    "pfoa": "severe",
+    "medial_oa": "moderate",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.86881633316011036335786865282908198831",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.86968600239724310678905311244945464037",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.86974853023888933977090539174537083409",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.87009029107490862793898457518597022930",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.87018440624359538250658207994111333051",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.87046380372347615219261898797043742937",
+    "synovitis": "mild",
+    "pfoa": "mild",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.87064372531225943854092598173945043861",
+    "synovitis": "moderate",
+    "pfoa": "none",
+    "medial_oa": "mild",
+    "lateral_oa": "mild"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.87101276883427329522365304528449003589",
+    "synovitis": "none",
+    "pfoa": "severe",
+    "medial_oa": "severe",
+    "lateral_oa": "mild"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.87102698749288269439517333660896096520",
+    "synovitis": "none",
+    "pfoa": "mild",
+    "medial_oa": "mild",
+    "lateral_oa": "mild"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.87185817772180109135714642184874643715",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.87198191797585172912979594638355685739",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "mild",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.87208714421237491643915928765740747633",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.87214831397290763080243320084625847148",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "mild",
+    "lateral_oa": "mild"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.87222653734797522858506220026427900177",
+    "synovitis": "none",
+    "pfoa": "mild",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.87223930502803944549504594723314220105",
+    "synovitis": "none",
+    "pfoa": "moderate",
+    "medial_oa": "none",
+    "lateral_oa": "severe"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.87241650441242408799533998101943024283",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.87253761427012478584873622994909841751",
+    "synovitis": "mild",
+    "pfoa": "mild",
+    "medial_oa": "severe",
+    "lateral_oa": "mild"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.87262205711949358943515326577886508585",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "mild",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.87267658933515453963224923798100651549",
+    "synovitis": "none",
+    "pfoa": "severe",
+    "medial_oa": "mild",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.87338030934656808032044071206920470285",
+    "synovitis": "none",
+    "pfoa": "mild",
+    "medial_oa": "mild",
+    "lateral_oa": "mild"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.87404730020015145302086817782843205171",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "mild",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.87413924318793242918916384453755054267",
+    "synovitis": "none",
+    "pfoa": "moderate",
+    "medial_oa": "moderate",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.87415625824966124550466651648244553892",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.87465202523430400780596885230492167155",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.87476514600989622078259281213313867927",
+    "synovitis": "none",
+    "pfoa": "mild",
+    "medial_oa": "mild",
+    "lateral_oa": "mild"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.87516159856486535118712846576943170757",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "moderate"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.87550037046735743504446944390018580426",
+    "synovitis": "none",
+    "pfoa": "mild",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.87560916423885591029120178291827033868",
+    "synovitis": "mild",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.87563449504927531224663601218159863518",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.87645071186049036230936726742129446188",
+    "synovitis": "none",
+    "pfoa": "mild",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.87650297321648368205324227429768256110",
+    "synovitis": "none",
+    "pfoa": "mild",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.87679606849449562627719676100773778015",
+    "synovitis": "mild",
+    "pfoa": "mild",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.87680825247567493080163504511649789348",
+    "synovitis": "none",
+    "pfoa": "severe",
+    "medial_oa": "severe",
+    "lateral_oa": "severe"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.87742737485142445536023876862256284839",
+    "synovitis": "none",
+    "pfoa": "mild",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.87761573479019057997334508266888503487",
+    "synovitis": "none",
+    "pfoa": "mild",
+    "medial_oa": "severe",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.87769640167791104899516835133527936885",
+    "synovitis": "mild",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.87797202230328868466634480198668365648",
+    "synovitis": "mild",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.87799106106199445436621174506197684035",
+    "synovitis": "none",
+    "pfoa": "severe",
+    "medial_oa": "mild",
+    "lateral_oa": "mild"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.87845297884497964690686366000533570840",
+    "synovitis": "none",
+    "pfoa": "mild",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.87876800169766592603600598167358214111",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "mild",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.87900330305833722536121052961334699743",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.87998832540756872371878613339628615880",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.88022456207467042544403752144674777523",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.88064086448060280325724227239585797761",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.88070896604159829163161019117970440189",
+    "synovitis": "none",
+    "pfoa": "mild",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.88074618626471004030644935418777151905",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.88077418639301174409926781329613570435",
+    "synovitis": "moderate",
+    "pfoa": "moderate",
+    "medial_oa": "severe",
+    "lateral_oa": "moderate"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.88114918358665488269761388157480523350",
+    "synovitis": "none",
+    "pfoa": "moderate",
+    "medial_oa": "none",
+    "lateral_oa": "severe"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.88189503151202366936330411627291827689",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.88211355128040927831407007101167868685",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.88274753211076645976496220746740420894",
+    "synovitis": "none",
+    "pfoa": "mild",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.88368930449171804348215887291291274615",
+    "synovitis": "mild",
+    "pfoa": "mild",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.88439732365857773633852840383740478214",
+    "synovitis": "mild",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.88457076333783710706782784856816112502",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.88466268868654468582661984391239692466",
+    "synovitis": "none",
+    "pfoa": "mild",
+    "medial_oa": "mild",
+    "lateral_oa": "mild"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.88480827968231439729532202780922145132",
+    "synovitis": "none",
+    "pfoa": "severe",
+    "medial_oa": "severe",
+    "lateral_oa": "severe"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.88505044370271842163477475980178015566",
+    "synovitis": "mild",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.88523737187772411911621088333701306485",
+    "synovitis": "mild",
+    "pfoa": "severe",
+    "medial_oa": "mild",
+    "lateral_oa": "mild"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.88565389747258713872180859306907392080",
+    "synovitis": "none",
+    "pfoa": "severe",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.88570871026022705696415758052703394453",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.88571985843649843469694556575325271560",
+    "synovitis": "none",
+    "pfoa": "mild",
+    "medial_oa": "moderate",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.88574487918084130981335189023288704909",
+    "synovitis": "mild",
+    "pfoa": "mild",
+    "medial_oa": "mild",
+    "lateral_oa": "mild"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.88609906210780568637209291182572648571",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.88620225126852321191690360547272730103",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.88653085234639096911379842849193874077",
+    "synovitis": "none",
+    "pfoa": "mild",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.88655485247489827200671636011965281184",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.88679328523895187500714090963655363787",
+    "synovitis": "none",
+    "pfoa": "severe",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.88682169866098509464628948503453852928",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.88687994744258163246685527273559741656",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "mild"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.88711356400820562340756013729440417015",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "severe",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.88726804476694411363564819498296119763",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "moderate",
+    "lateral_oa": "mild"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.88752039058074948027322975455607258941",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "mild",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.88753415430913291809543943690942744997",
+    "synovitis": "mild",
+    "pfoa": "mild",
+    "medial_oa": "severe",
+    "lateral_oa": "mild"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.88801151487634957068752641200383474212",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.88827276474694165071267273766912871459",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.88845193477394064535233691626377077328",
+    "synovitis": "none",
+    "pfoa": "mild",
+    "medial_oa": "mild",
+    "lateral_oa": "mild"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.88872155446935518174304990308380906112",
+    "synovitis": "mild",
+    "pfoa": "moderate",
+    "medial_oa": "severe",
+    "lateral_oa": "moderate"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.88874647535130028956725641820977918615",
+    "synovitis": "none",
+    "pfoa": "mild",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.88896246957673838955012057210098034177",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "severe",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.88899519473612920868099376939780201067",
+    "synovitis": "mild",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.88962401400598535739494671683916272476",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.88964371740619947193957393682095448256",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.89026102874017923932934673207699042800",
+    "synovitis": "mild",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.89045629523485194086986785222960864883",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.89048907638162719840222508855779172366",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "mild",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.89074359486713340585710357399403393294",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.89110271437785174288044757208973128908",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.89123035099342878362576960682354791116",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.89190511197564127079697151213577962649",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "mild",
+    "lateral_oa": "none"
+  },
+  {
+    "StudyInstanceUID": "1.2.826.0.1.3680043.8.498.89204062904097086723738217311755833877",
+    "synovitis": "none",
+    "pfoa": "none",
+    "medial_oa": "none",
+    "lateral_oa": "none"
+  }
+]
