@@ -1,134 +1,57 @@
-# Gemini Focused Labeling Prompts — Remaining 8 Findings
+# Gemini Focused Labeling — Antigravity Prompts
 
-**Why focused:** The 4-finding severity prompt hit 100% (58/58) vs gold. The 12-finding all-in-one dropped to 0.8319. Focus wins.
-
-**How to use:** Copy each prompt, paste into Antigravity Gemini 3.8 Flash, paste the report text where indicated. Output is 2 lines per report.
-
-**Batch files:** Same as severity — graded_batch_N_M.json format, but for these findings.
+**Style:** Match the proven 100% severity prompt. 4 findings per prompt. Batch by 500 rows.
 
 ---
 
-## Prompt 1: Ligaments (ACL, MCL)
+## Prompt A: Structural (ACL, MCL, MM, LM)
 
 ```
-You are a musculoskeletal radiologist. Read the knee MRI report below
-(it may be in English, Spanish, German, Portuguese, or French).
-For each of the 2 findings, output EXACTLY ONE term from the allowed list.
-If the report does not address a finding, use 'intact'.
+I have a dataset train.csv in this folder. Read rows [START] to [END], evaluate each knee MRI report, grade acl, mcl, mm, lm, and write the results into graded_structural_[START]_[END].json.
 
-IMPORTANT:
-- For ACL: 'mucoid_degeneration' and 'reconstructed' count as intact (not tears)
-- For ACL: 'sprain', 'partial_tear', 'complete_tear' are all positive
-- For MCL: 'sprain' and 'complete_tear' are positive
+Terms:
+- acl: intact, mucoid_degeneration, reconstructed, sprain, partial_tear, complete_tear
+- mcl: intact, sprain, complete_tear
+- mm: intact, degenerative_signal, postoperative, tear, macerated
+- lm: intact, degenerative_signal, postoperative, tear, macerated
 
-Output format: 2 lines, each 'key: term' (e.g. 'acl: partial_tear').
-No other text.
+Rules: If not mentioned → intact. mucoid_degeneration/reconstructed → intact. degenerative_signal/postoperative → intact (not tears). Only sprain/tear/macerated/complete_tear are positive.
 
-acl (anterior cruciate ligament (ACL)): intact, mucoid_degeneration, reconstructed, sprain, partial_tear, complete_tear
-mcl (medial collateral ligament (MCL)): intact, sprain, complete_tear
-
-REPORT:
-[PASTE REPORT HERE]
-
-LABELS:
+Output: [{"StudyInstanceUID": "...", "acl": "...", "mcl": "...", "mm": "...", "lm": "..."}, ...]
 ```
+
+**Batches:** [0-500], [500-1000], [1000-1500], [1500-2000], [2000-2500], [2500-3000], [3000-3500], [3500-4000], [4000-4276]
 
 ---
 
-## Prompt 2: Menisci (Medial, Lateral)
+## Prompt B: Fluid/Trauma (Effusion, Baker's, Contusion, Fracture)
 
 ```
-You are a musculoskeletal radiologist. Read the knee MRI report below
-(it may be in English, Spanish, German, Portuguese, or French).
-For each of the 2 findings, output EXACTLY ONE term from the allowed list.
-If the report does not address a finding, use 'intact'.
+I have a dataset train.csv in this folder. Read rows [START] to [END], evaluate each knee MRI report, grade effusion, bakers, contusion, fracture, and write the results into graded_fluidtrauma_[START]_[END].json.
 
-IMPORTANT:
-- 'degenerative_signal' (intrasubstance signal, not reaching surface) counts as intact, NOT a tear
-- 'postoperative' (prior meniscectomy/meniscal surgery) counts as intact
-- Only 'tear' and 'macerated' are positive
-- A "complex tear" or "bucket-handle tear" = tear
+Terms:
+- effusion: none, small, moderate, large
+- bakers: none, present, ruptured
+- contusion: none, present
+- fracture: none, present, suspected
 
-Output format: 2 lines, each 'key: term' (e.g. 'mm: tear').
-No other text.
+Rules: If not mentioned → none. "trace"/"minimal" → small. "popliteal cyst" = bakers. For contusion: ONLY traumatic edema (not degenerative). For fracture: include avulsion/insufficiency.
 
-mm (medial meniscus): intact, degenerative_signal, postoperative, tear, macerated
-lm (lateral meniscus): intact, degenerative_signal, postoperative, tear, macerated
-
-REPORT:
-[PASTE REPORT HERE]
-
-LABELS:
+Output: [{"StudyInstanceUID": "...", "effusion": "...", "bakers": "...", "contusion": "...", "fracture": "..."}, ...]
 ```
+
+**Batches:** [0-500], [500-1000], [1000-1500], [1500-2000], [2000-2500], [2500-3000], [3000-3500], [3500-4000], [4000-4276]
 
 ---
 
-## Prompt 3: Fluid (Effusion, Baker's Cyst)
+## Gold test (58 studies)
 
 ```
-You are a musculoskeletal radiologist. Read the knee MRI report below
-(it may be in English, Spanish, German, Portuguese, or French).
-For each of the 2 findings, output EXACTLY ONE term from the allowed list.
-If the report does not address a finding, use 'none'.
+I have gold_58.csv in this folder. It has 58 rows with columns: StudyInstanceUID, Report, ACL, MCL, Medial Meniscus, Lateral Meniscus, Effusion, Baker's, Contusion, Fracture.
 
-IMPORTANT:
-- For effusion: count even 'trace' or 'minimal' fluid as 'small' (not none)
-- For effusion: 'small', 'moderate', 'large' are all positive
-- For Baker's cyst: 'present' and 'ruptured' are both positive
-- A "popliteal cyst" = Baker's cyst
+For each row, read the Report text, grade [acl, mcl, mm, lm] using the terms above, then compare to the expert columns. Report accuracy per finding.
 
-Output format: 2 lines, each 'key: term' (e.g. 'effusion: small').
-No other text.
-
-effusion (joint effusion): none, small, moderate, large
-bakers (Baker's cyst): none, present, ruptured
-
-REPORT:
-[PASTE REPORT HERE]
-
-LABELS:
+Map to binary: acl intact/mucoid_degeneration/reconstructed=0, sprain/partial_tear/complete_tear=1. mcl intact=0, sprain/complete_tear=1. mm/lm intact/degenerative_signal/postoperative=0, tear/macerated=1.
 ```
 
----
-
-## Prompt 4: Trauma (Contusion, Fracture)
-
-```
-You are a musculoskeletal radiologist. Read the knee MRI report below
-(it may be in English, Spanish, German, Portuguese, or French).
-For each of the 2 findings, output EXACTLY ONE term from the allowed list.
-If the report does not address a finding, use 'none'.
-
-IMPORTANT:
-- For contusion: ONLY mark 'present' for traumatic bone marrow edema pattern
-  (e.g., "kissing contusions", post-traumatic edema). Do NOT mark for
-  ordinary degenerative changes or osteoarthritis-related edema.
-- For fracture: include avulsion fractures and insufficiency fractures
-- For fracture: 'suspected' (e.g., "cannot exclude fracture") counts as positive
-  in the binary mapping but use the term 'suspected' in output
-
-Output format: 2 lines, each 'key: term' (e.g. 'contusion: present').
-No other text.
-
-contusion (bone contusion): none, present
-fracture (fracture): none, present, suspected
-
-REPORT:
-[PASTE REPORT HERE]
-
-LABELS:
-```
-
----
-
-## Binary mapping (for merge)
-
-After collecting terms, map to binary using:
-
-- acl: intact/mucoid_degeneration/reconstructed=0; sprain/partial_tear/complete_tear=1
-- mcl: intact=0; sprain/complete_tear=1
-- mm/lm: intact/degenerative_signal/postoperative=0; tear/macerated=1
-- effusion: none=0; small/moderate/large=1
-- bakers: none=0; present/ruptured=1
-- contusion: none=0; present=1
-- fracture: none=0; present/suspected=1
+Do the same for [effusion, bakers, contusion, fracture] vs expert columns.
